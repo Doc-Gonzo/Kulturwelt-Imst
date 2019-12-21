@@ -1,98 +1,1 @@
-body {
-    font-family: verdana;
-
-}
-.clearer {
-    float: none !important;
-    clear: both !important;
-}
-#wrapper {
-    line-height: 1.4;
-}
-#wrapper a {
-  text-decoration:none;
-}
-#header_image {
-    max-height: 360px;
-    overflow: hidden;
-    position: relative;
-}
-#logo {
-    position: absolute;
-    right: 50px;
-    top: 20px;
-}
-#logo img {
-    width: 120px;
-    height: auto;
-    opacity: .9;
-}
-#container_content {
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-#content_main {
-    width: 70%;
-    float: left;
-    padding: 15px 0;
-    box-sizing: border-box;
-    line-height: 1.4;
-}
-#content {
-    padding-bottom: 80px;
-}
-#content_main img, #header_image img {
-    max-width: 100%;
-    height: auto;
-}
-#content p {
-  margin-top:0px;
-}
-#sidebar {
-    width: 28%;
-    float: right;
-    padding: 15px;
-    box-sizing: border-box;
-}
-#sidebar .news-list-view {
-    border-bottom: 1px solid grey;
-}
-#footer {
-    padding: 20px;
-    background-color: #89147d;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-#footer a {
-    color: #fff;
-}
-#footer_left {
-    width: 45%;
-    float: left;
-}
-#footer_right {
-    width: 45%;
-    float: right;
-    text-align: right;
-}
-
-#header_mobile {
-    display: none;
-}
-#breadcrumb {
-    font-size: 12px;
-    margin-top: 15px;
-}
-#breadcrumb ul, #breadcrumb li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-#breadcrumb ul a {
-    padding-left: 5px;
-    padding-right: 5px;
-}
+body {    font-family: verdana;}.clearer {    float: none !important;    clear: both !important;}#wrapper {    line-height: 1.4;}#wrapper a {    text-decoration: none;}#header_image {    max-height: 360px;    overflow: hidden;    position: relative;}#logo {    position: absolute;    right: 50px;    top: 20px;}#logo img {    width: 120px;    height: auto;    opacity: .9;}#container_content {    max-width: 1200px;    margin-right: auto;    margin-left: auto;}#content_main {    width: 70%;    float: left;    padding: 15px 0;    box-sizing: border-box;    line-height: 1.4;}#content {    padding-bottom: 80px;}#content_main img, #header_image img {    max-width: 100%;    height: auto;}#content p {    margin-top: 0px;}#sidebar {    width: 28%;    float: right;    padding: 15px;    box-sizing: border-box;}#sidebar .news-list-view {    border-bottom: 1px solid grey;}#footer {    padding: 20px;    background-color: #89147d;    color: #fff;    position: fixed;    bottom: 0;    width: 100%;    box-sizing: border-box;}#footer a {    color: #fff;}#footer_left {    width: 45%;    float: left;}#footer_right {    width: 45%;    float: right;    text-align: right;}#header_mobile {    display: none;}#breadcrumb {    font-size: 12px;    margin-top: 15px;}#breadcrumb ul, #breadcrumb li {    display: inline;    margin: 0;    padding: 0;}#breadcrumb ul a {    padding-left: 5px;    padding-right: 5px;}/* EVENT KAALENDER */.calendar_day {    padding: 20px;    box-sizing: border-box;    text-align: center;}.useless_menu, .useless_title {display: none}

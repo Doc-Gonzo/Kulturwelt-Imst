@@ -19,5 +19,8 @@
 /Packages
 /.htaccess
 /index.php
+/.png
+/.jpg
+/.svg
 # Ignore temp directory.
 /typo3temp/

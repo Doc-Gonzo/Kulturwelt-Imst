@@ -1,0 +1,20 @@
+{
+	"name": "georgringer/eventnews",
+	"type": "typo3-cms-extension",
+	"description": "Extend EXT:news with event and calendar functionality",
+	"homepage": "https://ringer.it",
+	"license": ["GPL-2.0-or-later"],
+	"require": {
+		"typo3/cms-core": "^8.7.22 || ^9.5.3",
+		"georgringer/news": ">=7.0.0,<7.9.99"
+	},
+	"autoload": {
+		"psr-4": {
+			"GeorgRinger\\Eventnews\\": "Classes"
+		}
+	},
+	"replace": {
+		"eventnews": "self.version",
+		"typo3-ter/eventnews": "self.version"
+	}
+}
