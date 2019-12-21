@@ -1,0 +1,26 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:then>
+		<f:comment><!-- Newsslider --></f:comment>
+		<f:if condition="{sliderItem.falMediaPreviews}">
+			<f:then>
+				<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+					<f:if condition="{mediaElement.originalResource.type} == 2">
+						<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" alt="{mediaElement.originalResource.alternative}"
+							width="{settings.jslidernews.thumbWidth}c" height="{settings.jslidernews.thumbHeight}c" />
+					</f:if>
+				</f:alias>
+			</f:then>
+			<f:else>
+				<t3s:image src="{settings.dummyImage}" alt="dummy image"
+					width="{settings.jslidernews.thumbWidth}c" height="{settings.jslidernews.thumbHeight}c" />
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:comment><!-- Content- and Pageslider --></f:comment>
+		<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+		 width="{settings.jslidernews.thumbWidth}c" height="{settings.jslidernews.thumbHeight}c" />
+	</f:else>
+</f:if>

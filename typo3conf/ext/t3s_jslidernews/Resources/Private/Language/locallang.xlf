@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-10-26T08:50:31Z" product-name="t3s_jslidernews">
+		<header/>
+		<body>
+
+			<trans-unit id="t3sjslidernews" xml:space="preserve">
+				<source>News &amp; Content Slider</source>
+			</trans-unit>
+			<trans-unit id="textslider" xml:space="preserve">
+				<source>Text &amp; Slider</source>
+			</trans-unit>
+			<trans-unit id="textslider.description" xml:space="preserve">
+				<source>Text with a responsive touch swipe javascript slider</source>
+			</trans-unit>
+			<trans-unit id="readmore" xml:space="preserve">
+				<source>read more</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexform.settings" xml:space="preserve">
+				<source>General Settings</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.contentElements" xml:space="preserve">
+				<source>Content Elements:</source>
+			</trans-unit>
+			<trans-unit id="flexform.contentpages" xml:space="preserve">
+				<source>Content Elements from Pages:</source>
+			</trans-unit>
+			<trans-unit id="flexform.pages" xml:space="preserve">
+				<source>Pages:</source>
+			</trans-unit>
+			<trans-unit id="flexform.subpages" xml:space="preserve">
+				<source>Subpages:</source>
+			</trans-unit>
+			<trans-unit id="flexform.subpages.I.0" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="flexform.subpages.I.1" xml:space="preserve">
+				<source>Include Subpages</source>
+			</trans-unit>
+			<trans-unit id="flexform.subpages.I.2" xml:space="preserve">
+				<source>Subpages only</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages" xml:space="preserve">
+				<source>Recursive (Subpages):</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages.I.0" xml:space="preserve">
+				<source>1 level</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages.I.1" xml:space="preserve">
+				<source>2 levels</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages.I.2" xml:space="preserve">
+				<source>3 levels</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages.I.3" xml:space="preserve">
+				<source>4 levels</source>
+			</trans-unit>
+			<trans-unit id="flexform.recursiveSubPages.I.4" xml:space="preserve">
+				<source>Infinite</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.pagesfirst" xml:space="preserve">
+				<source>Sort pages first:</source>
+			</trans-unit>
+			<trans-unit id="flexform.nodupe" xml:space="preserve">
+				<source>No duplicate images:</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos" xml:space="preserve">
+				<source>ColPos (for Pages):</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos.I.0" xml:space="preserve">
+				<source>all</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos.I.1" xml:space="preserve">
+				<source>0</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos.I.2" xml:space="preserve">
+				<source>1</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos.I.3" xml:space="preserve">
+				<source>2</source>
+			</trans-unit>
+			<trans-unit id="flexform.colPos.I.4" xml:space="preserve">
+				<source>3</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexform.sheetTitle" xml:space="preserve">
+				<source>Slider</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.style" xml:space="preserve">
+				<source>Slider Style:</source>
+			</trans-unit>
+			<trans-unit id="flexform.others" xml:space="preserve">
+				<source>others</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.style.I.0" xml:space="preserve">
+				<source>Style 1</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.I.1" xml:space="preserve">
+				<source>Style 2</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.I.2" xml:space="preserve">
+				<source>Style 3</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.I.3" xml:space="preserve">
+				<source>Style 4</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.I.4" xml:space="preserve">
+				<source>Style 5</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.style.II.0" xml:space="preserve">
+				<source>Basic Slider</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.II.1" xml:space="preserve">
+				<source>Slider w/thumbnail controlNav pattern</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.II.2" xml:space="preserve">
+				<source>Slider w/thumbnail slider</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.II.3" xml:space="preserve">
+				<source>Basic Carousel</source>
+			</trans-unit>
+			<trans-unit id="flexform.style.II.4" xml:space="preserve">
+				<source>Carousel with min and max ranges</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.captions" xml:space="preserve">
+				<source>Captions:</source>
+			</trans-unit>
+			<trans-unit id="flexform.captions.I.0" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="flexform.captions.I.1" xml:space="preserve">
+				<source>From content element</source>
+			</trans-unit>
+			<trans-unit id="flexform.captions.I.2" xml:space="preserve">
+				<source>From image</source>
+			</trans-unit>
+			<trans-unit id="flexform.captions.I.3" xml:space="preserve">
+				<source>From content element and image</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.captionsNews.I.1" xml:space="preserve">
+				<source>From news item</source>
+			</trans-unit>
+			<trans-unit id="flexform.captionsNews.I.3" xml:space="preserve">
+				<source>From news item and image</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexform.maxWidth" xml:space="preserve">
+				<source>max. Slider-Width in px:</source>
+			</trans-unit>
+			<trans-unit id="flexform.maxHeight" xml:space="preserve">
+				<source>max. Slider-Height in px:</source>
+			</trans-unit>
+			<trans-unit id="flexform.width" xml:space="preserve">
+				<source>Slider-Width in px:</source>
+			</trans-unit>
+			<trans-unit id="flexform.height" xml:space="preserve">
+				<source>Slider-Height in px:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.auto" xml:space="preserve">
+				<source>Automatic Animation:</source>
+			</trans-unit>
+			<trans-unit id="flexform.directionNav" xml:space="preserve">
+				<source>Previous/next navigation:</source>
+			</trans-unit>
+			<trans-unit id="flexform.controlNav" xml:space="preserve">
+				<source>1,2,3... navigation:</source>
+			</trans-unit>
+			<trans-unit id="flexform.imageLink" xml:space="preserve">
+				<source>Image as Link:</source>
+			</trans-unit>
+			<trans-unit id="flexform.css" xml:space="preserve">
+				<source>CSS-File:</source>
+			</trans-unit>
+			<trans-unit id="flexform.bgImage" xml:space="preserve">
+				<source>Background image:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.allowVideo" xml:space="preserve">
+				<source>videos in the slider:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.thumbHeight" xml:space="preserve">
+				<source>Thumbnail Height in px:</source>
+			</trans-unit>
+			<trans-unit id="flexform.thumbNumber" xml:space="preserve">
+				<source>Number of Thumbnails that should be visible:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.minItems" xml:space="preserve">
+				<source>Minimum number of carousel items that should be visible:</source>
+			</trans-unit>
+			<trans-unit id="flexform.maxItems" xml:space="preserve">
+				<source>Maxmimum number of carousel items that should be visible:</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexform.animationType" xml:space="preserve">
+				<source>Animation Type:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.autoPlay" xml:space="preserve">
+				<source>Auto Play:</source>
+			</trans-unit>
+			<trans-unit id="flexform.autoPlayInterval" xml:space="preserve">
+				<source>Auto Play Interval:</source>
+			</trans-unit>
+			<trans-unit id="flexform.pauseOnHover" xml:space="preserve">
+				<source>Pause On Hover:</source>
+			</trans-unit>
+			<trans-unit id="flexform.slideDuration" xml:space="preserve">
+				<source>SlideDuration:</source>
+			</trans-unit>
+			<trans-unit id="flexform.loop" xml:space="preserve">
+				<source>Loop:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.slideshowSpeed" xml:space="preserve">
+				<source>Slideshow Speed:</source>
+			</trans-unit>
+			<trans-unit id="flexform.animationSpeed" xml:space="preserve">
+				<source>Animation Speed:</source>
+			</trans-unit>
+
+
+			<trans-unit id="flexform.animSpeed" xml:space="preserve">
+				<source>Slide transition speed:</source>
+			</trans-unit>
+			<trans-unit id="flexform.pauseTime" xml:space="preserve">
+				<source>How long each slide will show:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.theme" xml:space="preserve">
+				<source>Theme:</source>
+			</trans-unit>
+			<trans-unit id="flexform.effect" xml:space="preserve">
+				<source>Effect:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.pause" xml:space="preserve">
+				<source>Pause (if Auto Animation):</source>
+			</trans-unit>
+			<trans-unit id="flexform.pause.I.0" xml:space="preserve">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="flexform.pause.I.1" xml:space="preserve">
+				<source>Pause animation while hovering</source>
+			</trans-unit>
+			<trans-unit id="flexform.pause.I.2" xml:space="preserve">
+				<source>Pause Button</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.progressbar" xml:space="preserve">
+				<source>Progress Bar:</source>
+			</trans-unit>
+			<trans-unit id="flexform.pagination" xml:space="preserve">
+				<source>Pagination:</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.js" xml:space="preserve">
+				<source>JavaScript-File:</source>
+			</trans-unit>
+			<trans-unit id="flexform.inlineJs" xml:space="preserve">
+				<source>Inline JavaScript:</source>
+			</trans-unit>
+
+			<trans-unit id="error" xml:space="preserve">
+				<source>ERROR (t3s_jslidernews): No data found!</source>
+			</trans-unit>
+
+
+		</body>
+	</file>
+</xliff>

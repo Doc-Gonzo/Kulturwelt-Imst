@@ -1,0 +1,20 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Include CSS-File --></f:comment>
+<f:if condition="{settings.customslider.cssFile}">
+    <t3s:includeFile path="{settings.customslider.cssFile}" />
+</f:if>
+<f:comment><!-- Include JavaScript --></f:comment>
+<f:if condition="{settings.customslider.jsFile}">
+    <t3s:includeFile path="{settings.customslider.jsFile}" />
+</f:if>
+<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
+<f:comment><!-- Slider --></f:comment>
+<f:if condition="{slides}">
+	<f:then>
+		<f:render section="Customslider" />
+	</f:then>
+	<f:else>
+		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
+	</f:else>
+</f:if>

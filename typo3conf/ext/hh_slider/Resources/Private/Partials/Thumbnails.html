@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:hh="http://typo3.org/ns/HauerHeinrich/HhSlider/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<div class="slider-container slider-thumbs slider-thumbs-{data.uid}">
+    <f:if condition="{data.tx_hhslider_content_type} == 1">
+        <f:if condition="{data_assets}">
+            <f:for each="{data_assets}" as="file">
+                <div class="slider-slide">
+                    <f:render partial="Media/Rendering/Image" arguments="{_all}" />
+                </div>
+            </f:for>
+        </f:if>
+    </f:if>
+
+    <f:if condition="{data.tx_hhslider_content_type} == 2">
+        <f:if condition="{data_tx_hhslider_child_content}">
+            <f:for each="{data_tx_hhslider_child_content}" as="content_item">
+                <div class="slider-slide">
+                    <f:cObject typoscriptObjectPath="tt_content" data="{content_item.data}" table="tt_content" />
+                </div>
+            </f:for>
+        </f:if>
+    </f:if>
+</div>
+
+</html>

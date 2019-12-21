@@ -1,0 +1,54 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Nivoslider/nivo-slider.css" />
+<f:if condition="{nivoslider.theme}">
+	<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Nivoslider/themes/{nivoslider.theme}/{nivoslider.theme}.css" />
+</f:if>
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.nivo.slider.pack.js" />
+<t3s:InlineJsCe contentObjectUid="{data.uid}" action="nivoslider" flexform="{nivoslider}" />
+
+<f:if condition="{nivoslider.theme}">
+	<f:then>
+		<div class="t3sjslidernews slider-wrapper theme-{nivoslider.theme}" style="max-width:{f:if(condition: nivoslider.width, then: '{nivoslider.width}', else: '700')}px;">
+			<div class="ribbon"></div>
+			<div id="slider-{data.uid}" class="nivoSlider">
+				<f:render section="Nivoslider" arguments="{_all}" />
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="t3sjslidernews slider-wrapper" style="max-width:{f:if(condition: nivoslider.width, then: '{nivoslider.width}', else: '700')}px;">
+			<div id="slider-{data.uid}" class="nivoSlider">
+				<f:render section="Nivoslider" arguments="{_all}" />
+			</div>
+		</div>
+	</f:else>
+</f:if>
+
+
+
+
+<f:section name="Nivoslider">
+	<f:if condition="{data.image_zoom}">
+		<f:then>
+			<t3s:fal uid="{data.uid}" as="images">
+				<f:for each="{images}" as="image" iteration="sliderItemIterator">
+					<a class="gallery" href="{f:uri.image(src:image.publicUrl)}">
+						<t3s:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: nivoslider.width, then: '{nivoslider.width}', else: '700')}c-0"
+						height="{f:if(condition: nivoslider.height, then: '{nivoslider.height}', else: '300')}c-0" />
+					</a>
+
+				</f:for>
+			</t3s:fal>
+		</f:then>
+		<f:else>
+			<t3s:fal uid="{data.uid}" as="images">
+				<f:for each="{images}" as="image" iteration="sliderItemIterator">
+					<t3s:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: nivoslider.width, then: '{nivoslider.width}', else: '700')}c-0"
+					height="{f:if(condition: nivoslider.height, then: '{nivoslider.height}', else: '300')}c-0" />
+
+				</f:for>
+			</t3s:fal>
+		</f:else>
+	</f:if>
+</f:section>

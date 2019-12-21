@@ -1,0 +1,179 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:if condition="{settings.nivoslider.captions}">
+	<f:then>
+		<f:if condition="{settings.controller} == 'Newsslider'">
+			<f:then>
+				<f:comment><!-- Newsslider --></f:comment>
+				<f:if condition="{settings.nivoslider.captions} == 2">
+					<f:then>
+						<f:render section="NewsCaptionFromIMG" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:render section="NewsCaption" arguments="{_all}" />
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:comment><!-- Content- and Pageslider --></f:comment>
+				<f:if condition="{settings.nivoslider.captions} == 2">
+					<f:then>
+						<f:render section="CaptionFromIMG" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:render section="Caption" arguments="{_all}" />
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.controller} == 'Newsslider'">
+			<f:then>
+				<f:comment><!-- Newsslider --></f:comment>
+				<f:render section="NewsImageNoCaption" arguments="{_all}" />
+			</f:then>
+			<f:else>
+				<f:comment><!-- Content- and Pageslider --></f:comment>
+				<f:render section="ImageNoCaption" arguments="{_all}" />
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>
+
+
+<f:section name="Caption">
+	<f:if condition="{sliderItem.title}">
+		<f:then>
+			<f:render section="Image" arguments="{_all}" />
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.bodytext}">
+				<f:then>
+					<f:render section="Image" arguments="{_all}" />
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.nivoslider.captions} == 3">
+						<f:then>
+							<f:render section="CaptionFromIMG" arguments="{_all}" />
+						</f:then>
+						<f:else>
+							<f:render section="ImageNoCaption" arguments="{_all}" />
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="CaptionFromIMG">
+	<f:if condition="{sliderItem.image.title}">
+		<f:then>
+			<f:render section="Image" arguments="{_all}" />
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.image.description}">
+				<f:then>
+					<f:render section="Image" arguments="{_all}" />
+				</f:then>
+				<f:else>
+					<f:render section="ImageNoCaption" arguments="{_all}" />
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="Image">
+	<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" title="#htmlcaption-{sliderItemIterator.cycle}" alt="{sliderItem.image.alternative}"
+	 width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+</f:section>
+
+<f:section name="ImageNoCaption">
+	<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+	 width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+</f:section>
+
+
+<f:section name="NewsCaption">
+	<f:if condition="{sliderItem.title}">
+		<f:then>
+			<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+				<f:render section="NewsImage" arguments="{_all}" />
+			</f:alias>
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.bodytext}">
+				<f:then>
+					<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+						<f:render section="NewsImage" arguments="{_all}" />
+					</f:alias>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.nivoslider.captions} == 3">
+						<f:then>
+							<f:render section="NewsCaptionFromIMG" arguments="{_all}" />
+						</f:then>
+						<f:else>
+							<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+								<f:render section="NewsImageNoCaption" arguments="{_all}" />
+							</f:alias>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="NewsCaptionFromIMG">
+	<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+		<f:if condition="{mediaElement.originalResource.title}">
+			<f:then>
+				<f:render section="NewsImage" arguments="{_all}" />
+			</f:then>
+			<f:else>
+				<f:if condition="{mediaElement.originalResource.description}">
+					<f:then>
+						<f:render section="NewsImage" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:render section="NewsImageNoCaption" arguments="{_all}" />
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:alias>
+</f:section>
+
+<f:section name="NewsImage">
+	<f:if condition="{sliderItem.falMediaPreviews}">
+		<f:then>
+			<f:if condition="{mediaElement.originalResource.type} == 2">
+				<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" title="#htmlcaption-{sliderItemIterator.cycle}" alt="{mediaElement.originalResource.alternative}"
+					width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+			</f:if>
+		</f:then>
+		<f:else>
+			<t3s:image src="{settings.dummyImage}" alt="dummy image" title="#htmlcaption-{sliderItemIterator.cycle}"
+				width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="NewsImageNoCaption">
+	<f:if condition="{sliderItem.falMediaPreviews}">
+		<f:then>
+			<f:if condition="{mediaElement.originalResource.type} == 2">
+				<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" alt="{mediaElement.originalResource.alternative}"
+					width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+			</f:if>
+		</f:then>
+		<f:else>
+			<t3s:image src="{settings.dummyImage}" alt="dummy image"
+				width="{settings.nivoslider.width}c" height="{settings.nivoslider.height}c" />
+		</f:else>
+	</f:if>
+</f:section>
+

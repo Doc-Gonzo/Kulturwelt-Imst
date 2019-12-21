@@ -1,0 +1,17 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<h3>
+		<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">{sliderItem.image.title}</f:link.page>
+	</h3>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<h3>
+		<t3s:link newsItem="{sliderItem}" settings="{settings}">
+			{mediaElement.originalResource.title}
+		</t3s:link>
+	</h3>
+</f:if>

@@ -1,0 +1,46 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:if condition="{data.image}">
+	<f:alias map="<t3s:flexForm flexForm='{data.pi_flexform}' />">
+		<f:if condition="{action} == 'flexslider'">
+			<f:if condition="{settings.textslider.headerOnTop}">
+				<f:then>
+					<f:format.raw>{stdheader}</f:format.raw>
+					<f:render partial="Textslider/Flexslider" arguments="{_all}" />
+					<div class="csc-textslider-text">
+						<f:format.html>{data.bodytext}</f:format.html>
+					</div>
+				</f:then>
+				<f:else>
+					<f:render partial="Textslider/Flexslider" arguments="{_all}" />
+					<f:format.raw>{stdheader}</f:format.raw>
+					<div class="csc-textslider-text">
+						<f:format.html>{data.bodytext}</f:format.html>
+					</div>
+				</f:else>
+			</f:if>
+		</f:if>
+		<f:if condition="{action} == 'nivoslider'">
+			<f:if condition="{settings.textslider.headerOnTop}">
+				<f:then>
+						<f:format.raw>{stdheader}</f:format.raw>
+						<f:render partial="Textslider/Nivoslider" arguments="{_all}" />
+						<div class="csc-textslider-text">
+							<f:format.html>{data.bodytext}</f:format.html>
+						</div>
+				</f:then>
+				<f:else>
+						<f:render partial="Textslider/Nivoslider" arguments="{_all}" />
+						<f:format.raw>{stdheader}</f:format.raw>
+						<div class="csc-textslider-text">
+							<f:format.html>{data.bodytext}</f:format.html>
+						</div>
+				</f:else>
+			</f:if>
+		</f:if>
+		<f:if condition="{action} == 'jssorslider'">
+			<f:render partial="Textslider/Jssorslider" arguments="{_all}" />
+		</f:if>
+	</f:alias>
+</f:if>
+

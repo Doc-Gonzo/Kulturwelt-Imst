@@ -1,0 +1,68 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Include CSS-File --></f:comment>
+<f:if condition="{settings.flexslider.cssFile}">
+	<f:then>
+		<t3s:includeFile path="{settings.flexslider.cssFile}" />
+	</f:then>
+	<f:else>
+		<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Flexslider/flexslider.css" />
+	</f:else>
+</f:if>
+
+<f:comment><!-- Include JavaScript --></f:comment>
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.flexslider-min.js" />
+<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
+
+<f:comment><!-- Slider --></f:comment>
+<f:if condition="{slides}">
+	<f:then>
+		<div class="t3s-jslidernews flex-container">
+			<div id="flexslider_{settings.contentUid}" class="flexslider{f:if(condition:'{settings.flexslider.style}==4',then:' carousel')}
+			 {f:if(condition:'{settings.flexslider.style}==5',then:'carousel')}" style="max-width:{settings.flexslider.width}px;" >
+				<ul class="slides">
+					<f:render section="Flexslider" />
+				</ul>
+			</div>
+			<f:comment><!-- Style 3 --></f:comment>
+			<f:if condition="{settings.flexslider.style} == 3">
+				<div id="carousel_{settings.contentUid}" class="flexslider carousel thumbnailslider hidden-xs" style="max-width:{settings.flexslider.width}px;">
+					<ul class="slides">
+						<f:for each="{slides}" as="sliderItem">
+							<li>
+								<f:comment><!-- Contentslider --></f:comment>
+								<f:if condition="{settings.controller} == 'Contentslider'">
+									<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" width="{settings.flexslider.thumbWidth}c" height="{settings.flexslider.thumbHeight}c" />
+								</f:if>
+								<f:comment><!-- Pageslider --></f:comment>
+								<f:if condition="{settings.controller} == 'Pageslider'">
+									<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" width="{settings.flexslider.thumbWidth}c" height="{settings.flexslider.thumbHeight}c" />
+								</f:if>
+								<f:comment><!-- Newsslider --></f:comment>
+								<f:if condition="{settings.controller} == 'Newsslider'">
+									<f:if condition="{sliderItem.falMediaPreviews}">
+										<f:then>
+											<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+												<f:if condition="{mediaElement.originalResource.type} == 2">
+													<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" alt="{mediaElement.originalResource.alternative}"
+														width="{settings.flexslider.thumbWidth}c" height="{settings.flexslider.thumbHeight}c" />
+												</f:if>
+											</f:alias>
+										</f:then>
+										<f:else>
+											<t3s:image src="{settings.dummyImage}" alt="dummy image"
+												width="{settings.flexslider.thumbWidth}c" height="{settings.flexslider.thumbHeight}c" />
+										</f:else>
+									</f:if>
+								</f:if>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+		</div>
+	</f:then>
+	<f:else>
+		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
+	</f:else>
+</f:if>

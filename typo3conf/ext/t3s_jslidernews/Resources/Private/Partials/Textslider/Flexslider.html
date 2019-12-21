@@ -1,0 +1,58 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Flexslider/flexslider.css" />
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.flexslider-min.js" />
+<t3s:InlineJsCe contentObjectUid="{data.uid}" action="flexslider" flexform="{flexslider}" />
+
+
+<div class="t3s-jslidernews-textslider">
+	<div id="flexslider_{data.uid}" class="flexslider" style="max-width:{f:if(condition: flexslider.width, then: '{flexslider.width}', else: '700')}px;" >
+		<ul class="slides">
+			<t3s:fal uid="{data.uid}" as="images">
+				<f:if condition="{data.image_zoom}">
+					<f:then>
+						<f:for each="{images}" as="image">
+							<li>
+								<a class="gallery" href="{f:uri.image(src:image.publicUrl)}">
+									<t3s:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: flexslider.width, then: '{flexslider.width}', else: '700')}c-0"
+									height="{f:if(condition: flexslider.height, then: '{flexslider.height}', else: '300')}c-0" />
+								</a>
+								<f:render section="Caption" arguments="{_all}" />
+							</li>
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:for each="{images}" as="image">
+			                <li>
+								<t3s:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: flexslider.width, then: '{flexslider.width}', else: '700')}c-0"
+								height="{f:if(condition: flexslider.height, then: '{flexslider.height}', else: '300')}c-0" />
+								<f:render section="Caption" arguments="{_all}" />
+			                </li>
+						</f:for>
+					</f:else>
+				</f:if>
+			</t3s:fal>
+		</ul>
+	</div>
+</div>
+
+
+<f:section name="Caption">
+	<f:if condition="{image.title}">
+		<f:then>
+			<f:if condition="{image.description}">
+				<f:then>
+					<p class="flex-caption"><span class="caption-title">{image.title}</span> {image.description}</p>
+				</f:then>
+				<f:else>
+					<p class="flex-caption"><span class="caption-title">{image.title}</span></p>
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:if condition="{image.image.description}">
+				<p class="flex-caption">{image.description}</p>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>

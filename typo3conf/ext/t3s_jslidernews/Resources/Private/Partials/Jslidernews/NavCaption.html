@@ -1,0 +1,12 @@
+<f:if condition="{sliderItem.title}">
+	<f:then>
+		<h4>{sliderItem.title}</h4>
+		<f:render partial="Jslidernews/NavBodytext" arguments="{_all}" />
+	</f:then>
+	<f:else>
+<f:if condition="{sliderItem.image.title}">
+		<f:render partial="Jslidernews/NavImgTitle" arguments="{_all}" />
+</f:if>	
+		<f:render partial="Jslidernews/NavBodytext" arguments="{_all}" />
+	</f:else>
+</f:if>

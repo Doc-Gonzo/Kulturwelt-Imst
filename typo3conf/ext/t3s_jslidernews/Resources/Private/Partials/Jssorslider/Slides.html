@@ -1,0 +1,221 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- banner-rotator --></f:comment>
+<f:if condition="{settings.jssorslider.style} == 1">
+    <div u="slides" style="position: absolute; left: 0; top: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+		<f:for each="{slides}" as="sliderItem">
+	        <div>
+				<f:render partial="Jssorslider/Image" arguments="{_all}" />
+
+				<f:if condition="{sliderItem.title}">
+					<f:then>
+						<div u=caption t="*" class="captionOrange banner-rotator-caption">
+							<f:render partial="HeaderLink" arguments="{_all}" />
+							<f:if condition="{sliderItem.bodytext}">
+								<br /><f:render partial="Bodytext" arguments="{_all}" />
+							</f:if>
+    					</div>
+					</f:then>
+					<f:else>
+						<f:if condition="{sliderItem.bodytext}">
+							<div u=caption t="*" class="captionOrange banner-rotator-caption">
+								<f:render partial="Bodytext" arguments="{_all}" />
+							</div>
+						</f:if>
+					</f:else>
+				</f:if>
+
+	        </div>
+		</f:for>
+    </div>
+</f:if>
+
+<f:comment><!-- banner-slider --></f:comment>
+<f:if condition="{settings.jssorslider.style} == 2">
+    <div u="slides" style="position: absolute; left: 0; top: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+		<f:for each="{slides}" as="sliderItem">
+        <div>
+			<f:render partial="Jssorslider/Image" arguments="{_all}" />
+			<f:if condition="{sliderItem.title}">
+				<f:then>
+	                <div u="thumb">
+						<f:render partial="HeaderLink" arguments="{_all}" />
+						<f:if condition="{sliderItem.bodytext}">
+							<f:format.raw>{sliderItem.bodytext}</f:format.raw>
+						</f:if>
+	                </div>
+				</f:then>
+				<f:else>
+					<f:if condition="{sliderItem.bodytext}">
+		                <div u="thumb">
+							<f:format.raw>{sliderItem.bodytext}</f:format.raw>
+		                </div>
+					</f:if>
+				</f:else>
+			</f:if>
+        </div>
+		</f:for>
+    </div>
+</f:if>
+
+
+<f:comment><!-- content-slider --></f:comment>
+<f:if condition="{settings.jssorslider.style} == 3">
+    <div u="slides" style="position: absolute; left: 0; top: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+		<f:for each="{slides}" as="sliderItem">
+        	<div>
+	            <div class="content-slider-caption">
+	                <br />
+	                <span class="content-slider-caption-1"><f:render partial="HeaderLink" arguments="{_all}" /></span>
+	                <br />
+					<f:if condition="{sliderItem.subheader}">
+		                <br />
+		                <span class="content-slider-caption-2">
+							{sliderItem.subheader}
+		                </span>
+		                <br />
+					</f:if>
+	                <span class="content-slider-caption-3">
+						<f:render partial="Bodytext" arguments="{_all}" />
+	                </span>
+	            </div>
+				<f:if condition="{settings.jssorslider.imageLink}">
+					<f:then>
+						<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">
+							<f:render section="Image" arguments="{_all}" />
+						</f:link.page>
+					</f:then>
+					<f:else>
+						<f:render section="Image" arguments="{_all}" />
+					</f:else>
+				</f:if>
+				<f:render section="Thumb" arguments="{_all}" />
+        	</div>
+		</f:for>
+    </div>
+</f:if>
+
+
+<f:comment><!-- full-width-slider --></f:comment>
+<f:if condition="{settings.jssorslider.style} == 4">
+
+	<div u="slides" style="position: absolute; left: 0; top: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+		<f:for each="{slides}" as="sliderItem">
+	    	<div>
+				<f:render partial="Jssorslider/Image" arguments="{_all}" />
+		        <div class="slider-header">
+					<f:render partial="HeaderLink" arguments="{_all}" />
+				</div>
+		        <div class="slider-text">
+					<f:render partial="Bodytext" arguments="{_all}" />
+		        </div>
+		    </div>
+		</f:for>
+	</div>
+</f:if>
+
+
+<f:comment><!-- list-slider --></f:comment>
+<f:if condition="{settings.jssorslider.style} == 5">
+	<div u="slides" style="position: absolute; left: 0; top: 0; width: {settings.jssorslider.list.image.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+		<f:for each="{slides}" as="sliderItem">
+	    	<div>
+				<f:render partial="Jssorslider/Image" arguments="{_all}" />
+				<div u="thumb">
+					<f:if condition="{settings.controller} == 'Newsslider'">
+						<f:then>
+							<f:comment><!-- Newsslider --></f:comment>
+							<f:if condition="{sliderItem.falMediaPreviews}">
+								<f:then>
+									<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+										<f:if condition="{mediaElement.originalResource.type} == 2">
+											<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"
+											 width="{settings.jssorslider.list.thumbnavigator.thumbnail.width}c" height="{settings.jssorslider.list.thumbnavigator.thumbnail.height}c" class="i" />
+										</f:if>
+									</f:alias>
+								</f:then>
+								<f:else>
+									<t3s:image src="{settings.dummyImage}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"
+									 width="{settings.jssorslider.list.thumbnavigator.thumbnail.width}c" height="{settings.jssorslider.list.thumbnavigator.thumbnail.height}c" class="i" />
+								</f:else>
+							</f:if>
+						</f:then>
+						<f:else>
+							<f:comment><!-- Content- and Pageslider --></f:comment>
+							<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" title="{sliderItem.image.title}" alt="{sliderItem.image.alternative}"
+							 width="{settings.jssorslider.list.thumbnavigator.thumbnail.width}c" height="{settings.jssorslider.list.thumbnavigator.thumbnail.height}c" class="i" />
+						</f:else>
+					</f:if>
+					 <div class="t">
+					 	<f:render partial="HeaderLink" arguments="{_all}" />
+					 </div>
+					 <div class="c">
+					 	<f:render partial="Bodytext" arguments="{_all}" />
+					 </div>
+				</div>
+	    	</div>
+	</f:for>
+	</div>
+</f:if>
+
+
+<f:section name="Image">
+	<f:if condition="{settings.controller} == 'Newsslider'">
+		<f:then>
+			<f:comment><!-- Newsslider --></f:comment>
+			<f:if condition="{sliderItem.falMediaPreviews}">
+				<f:then>
+					<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+						<f:if condition="{mediaElement.originalResource.type} == 2">
+							<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"
+							width="{settings.jssorslider.content.image.width}c" height="{settings.jssorslider.content.image.height}c" class="content-slider-image"
+							additionalAttributes="{style:'position: absolute; top: {settings.jssorslider.content.image.top}px; left: {settings.jssorslider.content.image.width}px;
+							width: {settings.jssorslider.content.image.width}px; height: {settings.jssorslider.content.image.height}px;'}" />
+						</f:if>
+					</f:alias>
+				</f:then>
+				<f:else>
+					<t3s:image src="{settings.dummyImage}" alt="dummy"
+					width="{settings.jssorslider.content.image.width}c" height="{settings.jssorslider.content.image.height}c" class="content-slider-image"
+					additionalAttributes="{style:'position: absolute; top: {settings.jssorslider.content.image.top}px; left: {settings.jssorslider.content.image.width}px;
+					width: {settings.jssorslider.content.image.width}px; height: {settings.jssorslider.content.image.height}px;'}" />
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:comment><!-- Content- and Pageslider --></f:comment>
+			<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" title="{sliderItem.image.title}" alt="{sliderItem.image.alternative}"
+			width="{settings.jssorslider.content.image.width}c" height="{settings.jssorslider.content.image.height}c" class="content-slider-image"
+			additionalAttributes="{style:'position: absolute; top: {settings.jssorslider.content.image.top}px; left: {settings.jssorslider.content.image.width}px;
+			width: {settings.jssorslider.content.image.width}px; height: {settings.jssorslider.content.image.height}px;'}" />
+		</f:else>
+	</f:if>
+
+</f:section>
+
+<f:section name="Thumb">
+	<f:if condition="{settings.controller} == 'Newsslider'">
+		<f:then>
+			<f:comment><!-- Newsslider --></f:comment>
+			<f:if condition="{sliderItem.falMediaPreviews}">
+				<f:then>
+					<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+						<f:if condition="{mediaElement.originalResource.type} == 2">
+							<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}"
+							 width="{settings.jssorslider.content.thumbnail.width}c" height="{settings.jssorslider.content.thumbnail.height}c" additionalAttributes="{u:'thumb'}" />
+						</f:if>
+					</f:alias>
+				</f:then>
+				<f:else>
+					<t3s:image src="{settings.dummyImage}" alt="dummy"
+					 width="{settings.jssorslider.content.thumbnail.width}c" height="{settings.jssorslider.content.thumbnail.height}c" additionalAttributes="{u:'thumb'}" />
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:comment><!-- Content- and Pageslider --></f:comment>
+			<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" title="{sliderItem.image.title}" alt="{sliderItem.image.alternative}"
+			 width="{settings.jssorslider.content.thumbnail.width}c" height="{settings.jssorslider.content.thumbnail.height}c" additionalAttributes="{u:'thumb'}" />
+		</f:else>
+	</f:if>
+</f:section>

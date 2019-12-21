@@ -1,0 +1,23 @@
+<div id="slider{settings.contentUid}_container" class="jssorslider" style="position: relative; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px; overflow: hidden;">
+    <div u="loading" style="position: absolute; top: 0; left: 0;">
+        <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000; top: 0; left: 0;width: 100%;height:100%;"></div>
+        <div style="position: absolute; display: block; background: url('typo3conf/ext/t3s_jslidernews/Resources/Public/Styles/Jssorslider/img/loading.gif') no-repeat center center; top: 0; left: 0;width: 100%;height:100%;"></div>
+    </div>
+	<f:render partial="Jssorslider/Slides" arguments="{_all}" />
+    <div u="thumbnavigator" class="slider{settings.contentUid}-T" style="position: absolute; bottom: 0; left: 0; height:45px; width:{settings.jssorslider.width}px;">
+        <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div u="slides">
+            <div u="prototype" style="POSITION: absolute; WIDTH: {settings.jssorslider.width}px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
+                <thumbnailtemplate style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
+            </div>
+        </div>
+    </div>
+    <div u="navigator" class="jssorb01" style="position: absolute; bottom: 16px; right: 10px;">
+        <div u="prototype" style="POSITION: absolute; WIDTH: 12px; HEIGHT: 12px;"></div>
+    </div>
+    <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
+    </span>
+    <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
+    </span>
+    <a style="display: none" href="http://www.jssor.com">javascript</a>
+</div>

@@ -1,0 +1,16 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/ResponsiveSlider.css" />
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jssor.slider.mini.js" />
+<t3s:inlineJsCe contentObjectUid="{data.uid}" action="jssorslider" flexform="{jssorslider}" />
+
+<div class="t3s-jslidernews-textslider" style="display: block;">
+    <div id="slider{data.uid}_container" class="responsive-slider" style="width: {f:if(condition: jssorslider.width, then: '{jssorslider.width}', else: '600')}px; height: {f:if(condition: jssorslider.height, then: '{jssorslider.height}', else: '300')}px;">
+        <!-- Slides Container -->
+        <div u="slides" style="position: absolute; left: 0; top: 0; width: {f:if(condition: jssorslider.width, then: '{jssorslider.width}', else: '600')}px; height: {f:if(condition: jssorslider.height, then: '{jssorslider.height}', else: '300')}px; overflow: hidden;">
+			<f:render partial="Textslider/JssorImages" arguments="{_all}" />
+        </div>
+	</div>
+	<f:format.raw>{stdheader}</f:format.raw>
+	<div class="csc-textslider-text"><f:format.html>{data.bodytext}</f:format.html></div>
+</div>

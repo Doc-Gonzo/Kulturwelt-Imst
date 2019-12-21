@@ -1,0 +1,14 @@
+	# cat=basic/enable/10; type=boolean; label=Show in preview views for Content Slider (tt_content): It is possible to decide which image can be shown in the slider. If not checked, it will be displayed the first image.
+preview = 0
+
+	# cat=basic/enable/20; type=boolean; label=Text and Slider: Content Element "Text and Slider" will be available, if checked.
+textslider = 1
+
+	# cat=basic/enable/30; type=boolean; label=Page Slider: Plugin will be available, if checked.
+pageslider = 1
+
+	# cat=basic/enable/40; type=boolean; label=Content Slider: Plugin will be available, if checked.
+contentslider = 1
+
+	# cat=basic/enable/50; type=boolean; label=News Slider: Plugin will be available, if checked and EXT:news is loaded.
+newsslider = 1

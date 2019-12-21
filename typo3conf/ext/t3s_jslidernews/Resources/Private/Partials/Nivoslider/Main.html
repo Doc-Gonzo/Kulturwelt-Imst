@@ -1,0 +1,40 @@
+<div id="slider-{settings.contentUid}" class="nivoSlider">
+	<f:for each="{slides}" as="sliderItem"  iteration="sliderItemIterator">
+		<f:if condition="{settings.nivoslider.imageLink}">
+			<f:then>
+				<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">
+					<f:render partial="Nivoslider/Image" arguments="{_all}" />
+				</f:link.page>
+			</f:then>
+			<f:else>
+				<f:render partial="Nivoslider/Image" arguments="{_all}" />
+			</f:else>
+		</f:if>
+	</f:for>
+</div>
+
+<f:if condition="{settings.nivoslider.captions}">
+	<f:for each="{slides}" as="sliderItem"  iteration="sliderItemIterator">
+			<div id="htmlcaption-{sliderItemIterator.cycle}" class="nivo-html-caption">
+				<div class="htmlcaption">
+
+					<f:if condition="{settings.nivoslider.captions} == 1">
+						<f:then>
+							<f:render partial="Caption" arguments="{_all}"/>
+						</f:then>
+						<f:else>
+							<f:if condition="{settings.nivoslider.captions} == 2">
+								<f:then>
+									<f:render partial="CaptionFromImg" arguments="{_all}"/>
+								</f:then>
+								<f:else>
+									<f:render partial="CaptionAll" arguments="{_all}"/>
+								</f:else>
+							</f:if>
+						</f:else>
+					</f:if>
+
+				</div>
+			</div>
+	</f:for>
+</f:if>

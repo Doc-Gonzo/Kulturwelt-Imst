@@ -1,0 +1,40 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Include CSS-File --></f:comment>
+<f:if condition="{settings.nivoslider.cssFile}">
+	<f:then>
+    	<t3s:includeFile path="{settings.nivoslider.cssFile}" />
+	</f:then>
+	<f:else>
+    	<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Nivoslider/nivo-slider.css" />
+		<f:if condition="{settings.nivoslider.theme}">
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Nivoslider/themes/{settings.nivoslider.theme}/{settings.nivoslider.theme}.css" />
+		</f:if>
+	</f:else>
+</f:if>
+
+<f:comment><!-- Include JavaScript --></f:comment>
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.nivo.slider.pack.js" />
+<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
+
+<f:comment><!-- Slider --></f:comment>
+<f:if condition="{slides}">
+	<f:then>
+		<f:if condition="{settings.nivoslider.theme}">
+			<f:then>
+				<div class="t3sjslidernews slider-wrapper theme-{settings.nivoslider.theme}" style="max-width:{f:if(condition: settings.nivoslider.width, then: '{settings.nivoslider.width}', else: '700')}px;">
+					<div class="ribbon"></div>
+					<f:render section="Nivoslider" />
+				</div>
+			</f:then>
+			<f:else>
+				<div class="t3sjslidernews slider-wrapper" style="max-width:{f:if(condition: settings.nivoslider.width, then: '{settings.nivoslider.width}', else: '700')}px;">
+					<f:render section="Nivoslider" />
+				</div>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
+	</f:else>
+</f:if>

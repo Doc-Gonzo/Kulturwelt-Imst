@@ -1,0 +1,24 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<t3s:fal uid="{data.uid}" as="images">
+	<f:if condition="{data.image_zoom}">
+		<f:then>
+			<f:for each="{images}" as="image">
+				<div>
+					<a class="gallery" href="{f:uri.image(src:image.publicUrl)}">
+						<f:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: jssorslider.width, then: '{jssorslider.width}', else: '600')}c-0" height="{f:if(condition: jssorslider.height, then: '{jssorslider.height}', else: '300')}c-0" additionalAttributes="{u:'image'}" />
+					</a>
+					<f:render partial="Textslider/JssorCaptions" arguments="{_all}" />
+				</div>
+			</f:for>
+		</f:then>
+		<f:else>
+			<f:for each="{images}" as="image">
+                <div>
+					<f:image src="{image.uid}" treatIdAsReference="1" title="{image.title}" alt="{image.alternative}" width="{f:if(condition: jssorslider.width, then: '{jssorslider.width}', else: '600')}c-0" height="{f:if(condition: jssorslider.height, then: '{jssorslider.height}', else: '300')}c-0" additionalAttributes="{u:'image'}" />
+					<f:render partial="Textslider/JssorCaptions" arguments="{_all}" />
+                </div>
+			</f:for>
+		</f:else>
+	</f:if>
+</t3s:fal>

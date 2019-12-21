@@ -1,0 +1,49 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:layout name="Customslider" />
+<f:section name="Customslider">
+<f:if condition="{slides}">
+
+<f:debug title="Results of slides">{slides}</f:debug>
+
+<h3 style="color: red">You have to customize this template with the markup of your slider!</h3>
+
+	<ul class="test-slider">
+		<f:if condition="{settings.customslider.imageLink}">
+			<f:then>
+				<f:for each="{slides}" as="sliderItem">
+					<li>
+						<t3s:link newsItem="{sliderItem}" settings="{settings}">
+							<f:render section="Test-Image" arguments="{_all}" />
+						</t3s:link>
+					</li>
+				</f:for>
+			</f:then>
+			<f:else>
+				<f:for each="{slides}" as="sliderItem">
+					<li>
+						<f:render section="Test-Image" arguments="{_all}" />
+					</li>
+				</f:for>
+			</f:else>
+		</f:if>
+	</ul>
+</f:if>
+</f:section>
+
+<f:section name="Test-Image">
+	<f:if condition="{sliderItem.falMediaPreviews}">
+		<f:then>
+			<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+				<f:if condition="{mediaElement.originalResource.type} == 2">
+					<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" alt="{mediaElement.originalResource.alternative}"
+						width="{settings.customslider.width}c" height="{settings.customslider.height}c" />
+				</f:if>
+			</f:alias>
+		</f:then>
+		<f:else>
+			<t3s:image src="{settings.dummyImage}" alt="dummy image"
+				width="{settings.customslider.width}c" height="{settings.customslider.height}c" />
+		</f:else>
+	</f:if>
+</f:section>

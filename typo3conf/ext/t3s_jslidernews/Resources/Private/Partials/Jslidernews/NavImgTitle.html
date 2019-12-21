@@ -1,0 +1,18 @@
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:then>
+		<f:comment><!-- Newsslider --></f:comment>
+		<h4>
+			<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+				<f:if condition="{mediaElement.originalResource.type} == 2">
+					{mediaElement.originalResource.title}<
+				</f:if>
+			</f:alias>
+		</h4>
+	</f:then>
+	<f:else>
+		<f:comment><!-- Content- and Pageslider --></f:comment>
+		<h4>
+			{sliderItem.image.title}
+		</h4>
+	</f:else>
+</f:if>

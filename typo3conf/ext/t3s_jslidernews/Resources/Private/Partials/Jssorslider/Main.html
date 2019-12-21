@@ -1,0 +1,20 @@
+<f:if condition="{settings.jssorslider.style} == 1">
+	<f:comment><!-- banner-rotator --></f:comment>
+	<f:render partial="Jssorslider/BannerRotator" arguments="{_all}" />
+</f:if>
+<f:if condition="{settings.jssorslider.style} == 2">
+	<f:comment><!-- banner-slider --></f:comment>
+	<f:render partial="Jssorslider/BannerSlider" arguments="{_all}" />
+</f:if>
+<f:if condition="{settings.jssorslider.style} == 3">
+	<f:comment><!-- content-slider --></f:comment>
+	<f:render partial="Jssorslider/ContentSlider" arguments="{_all}" />
+</f:if>
+<f:if condition="{settings.jssorslider.style} == 4">
+	<f:comment><!-- full-width-slider --></f:comment>
+	<f:render partial="Jssorslider/FullWidthSlider" arguments="{_all}" />
+</f:if>
+<f:if condition="{settings.jssorslider.style} == 5">
+	<f:comment><!-- list-slider --></f:comment>
+	<f:render partial="Jssorslider/ListSlider" arguments="{_all}" />
+</f:if>

@@ -1,0 +1,65 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<f:if condition="{settings.jssorslider.imageLink}">
+		<f:then>
+			<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">
+				<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+				 width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+			 width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:if condition="{settings.jssorslider.imageLink}">
+		<f:then>
+			<t3s:link newsItem="{sliderItem}" settings="{settings}">
+				<f:render section="NewsImage" arguments="{_all}" />
+			</t3s:link>
+		</f:then>
+		<f:else>
+			<f:render section="NewsImage" arguments="{_all}" />
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Pageslider --></f:comment>
+<f:if condition="{settings.controller} == 'Pageslider'">
+	<f:if condition="{settings.jssorslider.imageLink}">
+		<f:then>
+			<f:link.page pageUid="{sliderItem.pid}">
+				<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+				 width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1" alt="{sliderItem.image.alternative}"
+			 width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+		</f:else>
+	</f:if>
+</f:if>
+
+
+<f:section name="NewsImage">
+	<f:if condition="{sliderItem.falMediaPreviews}">
+		<f:then>
+			<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+				<f:if condition="{mediaElement.originalResource.type} == 2">
+					<t3s:image src="{mediaElement.uid}" treatIdAsReference="1" alt="{mediaElement.originalResource.alternative}"
+						width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+				</f:if>
+			</f:alias>
+		</f:then>
+		<f:else>
+			<t3s:image src="{settings.dummyImage}" alt="dummy image"
+				width="{settings.jssorslider.width}c" height="{settings.jssorslider.height}c" additionalAttributes="{u:'image'}" />
+		</f:else>
+	</f:if>
+</f:section>

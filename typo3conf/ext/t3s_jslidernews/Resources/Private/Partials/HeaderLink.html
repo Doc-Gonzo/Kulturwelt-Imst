@@ -1,0 +1,43 @@
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<f:if condition="{settings.action} == 'jssorslider'">
+		<f:then>
+			<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">{sliderItem.title}</f:link.page>
+		</f:then>
+		<f:else>
+			<h3>
+				<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">{sliderItem.title}</f:link.page>
+			</h3>
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:if condition="{settings.action} == 'jssorslider'">
+		<f:then>
+			<t3s:link newsItem="{sliderItem}" settings="{settings}">{sliderItem.title}</t3s:link>
+		</f:then>
+		<f:else>
+			<h3>
+				<t3s:link newsItem="{sliderItem}" settings="{settings}">{sliderItem.title}</t3s:link>
+			</h3>
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Pageslider --></f:comment>
+<f:if condition="{settings.controller} == 'Pageslider'">
+	<f:if condition="{settings.action} == 'jssorslider'">
+		<f:then>
+			<f:link.page pageUid="{sliderItem.pid}">{sliderItem.title}</f:link.page>
+		</f:then>
+		<f:else>
+			<h3>
+				<f:link.page pageUid="{sliderItem.pid}">{sliderItem.title}</f:link.page>
+			</h3>
+		</f:else>
+	</f:if>
+</f:if>
