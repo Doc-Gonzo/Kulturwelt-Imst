@@ -6,8 +6,8 @@
 		Partials/List/Item.html
 -->
 <n:excludeDisplayedNews newsItem="{newsItem}" />
-<div class="row news-list-item">
-	<div class="col-md-3">
+<div class="news-list-item">
+	<div class="">
 		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 			<f:if condition="{newsItem.mediaPreviews}">
 				<f:then>
@@ -22,7 +22,7 @@
 		</n:link>
 	</div>
 
-	<div class="col-md-9 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<div class="articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 		<h3 itemprop="headline">
 			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 				{newsItem.title}
@@ -32,7 +32,7 @@
 		<f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
 
 		<!-- teaser -->
-		<div class="lead" itemprop="description">
+		<div class="" itemprop="description">
 			<n:removeMediaTags>
 				<f:if condition="{newsItem.teaser}">
 					<f:then>

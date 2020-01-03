@@ -1284,13 +1284,13 @@ p {
 }
 .lead {
   margin-bottom: 24px;
-  font-size: 18px;
+
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 24px;
+
   }
 }
 small,
@@ -3144,9 +3144,7 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+
 }
 .btn-default:focus,
 .btn-default.focus {
@@ -7174,12 +7172,12 @@ h4 + h5 {
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 19.2px;
+
   }
 }
 @media (min-width: 992px) {
   .lead {
-    font-size: 20.8px;
+
   }
 }
 .text-column > *:first-child {
