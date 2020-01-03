@@ -83,7 +83,7 @@
 </f:section>
 
 <f:section name="headline">
-	<h1 itemprop="headline">{newsItem.title}</h1>
+	<h1  itemprop="headline">{newsItem.title}</h1>
 	<f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
 </f:section>
 
@@ -106,6 +106,37 @@
 			<f:format.html>{newsItem.bodytext}</f:format.html>
 		</div>
 	</n:renderMedia>
+
+	<!-- TEST -->
+	<div class="event_details_wrapper">
+
+		<ul class="event_details">
+			<f:if condition="{newsItem.organizer}">
+				<li><strong>
+					<f:translate key="organizer" extensionName="eventnews" />
+				</strong>: <a href="{newsItem.organizer.link}" title="{newsItem.organizer.title}"> {newsItem.organizer.title}</a>
+				</li>
+			</f:if>
+			<f:if condition="{newsItem.location}">
+				<li><strong>
+					<f:translate key="location" extensionName="eventnews" />
+				</strong>:<a href="{newsItem.location.link}" title="{newsItem.location.title}"> {newsItem.location.title}</a>
+
+				</li>
+			</f:if>
+			<!-- <f:if condition="{newsItem.eventEnd}">
+				<li>
+					<strong>
+						<f:translate key="event_end" extensionName="eventnews" />
+					</strong>: {f:format.date(date:newsItem.eventEnd.date,format:'%d.%m.%Y')}
+					{newsItem.eventDate.date}
+
+				</li>
+			</f:if>
+			-->
+		</ul>
+	</div>
+	<!-- TEST ENDE -->
 
 	<f:if condition="{settings.backPid}">
 		<!-- Link Back -->
