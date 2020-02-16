@@ -8109,6 +8109,10 @@ body,
   padding-top: 1em;
   padding-bottom: 1em;
 }
+#header_image div {
+  margin-top: 0 !important;
+  padding-top: 0px !important;
+}
 @media (min-width: 768px) {
   .frame {
     padding-top: 1.5em;
