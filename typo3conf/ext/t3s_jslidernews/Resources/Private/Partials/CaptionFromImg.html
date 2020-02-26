@@ -1,35 +1,35 @@
-<f:comment><!-- Contentslider --></f:comment>
-<f:if condition="{settings.controller} == 'Contentslider'">
-	<f:if condition="{sliderItem.image.title}">
-		<f:then>
-			<f:render partial="ImgTitleLink" arguments="{_all}" />
-			<f:if condition="{sliderItem.image.description}">
-				<f:render partial="ImgDescription" arguments="{_all}" />
-			</f:if>
-		</f:then>
-		<f:else>
-			<f:if condition="{sliderItem.image.description}">
-				<f:render partial="ImgDescription" arguments="{_all}" />
-			</f:if>
-		</f:else>
-	</f:if>
-</f:if>
-
-<f:comment><!-- Newsslider --></f:comment>
-<f:if condition="{settings.controller} == 'Newsslider'">
-	<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
-		<f:if condition="{mediaElement.originalResource.title}">
-			<f:then>
-				<f:render partial="ImgTitleLink" arguments="{_all}" />
-				<f:if condition="{mediaElement.originalResource.description}">
-					<f:render partial="ImgDescription" arguments="{_all}" />
-				</f:if>
-			</f:then>
-			<f:else>
-				<f:if condition="{mediaElement.originalResource.description}">
-					<f:render partial="ImgDescription" arguments="{_all}" />
-				</f:if>
-			</f:else>
-		</f:if>
-	</f:alias>
-</f:if>
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<f:if condition="{sliderItem.image.title}">
+		<f:then>
+			<f:render partial="ImgTitleLink" arguments="{_all}" />
+			<f:if condition="{sliderItem.image.description}">
+				<f:render partial="ImgDescription" arguments="{_all}" />
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.image.description}">
+				<f:render partial="ImgDescription" arguments="{_all}" />
+			</f:if>
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+		<f:if condition="{mediaElement.originalResource.title}">
+			<f:then>
+				<f:render partial="ImgTitleLink" arguments="{_all}" />
+				<f:if condition="{mediaElement.originalResource.description}">
+					<f:render partial="ImgDescription" arguments="{_all}" />
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{mediaElement.originalResource.description}">
+					<f:render partial="ImgDescription" arguments="{_all}" />
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:alias>
+</f:if>

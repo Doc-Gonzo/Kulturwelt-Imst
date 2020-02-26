@@ -1,27 +1,27 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	xmlns:newsslider="http://typo3.org/ns/T3S/Newsslider/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:if condition="{news}">
-	<f:if condition="{settings.flexslider.cssFile}">
-		<f:then>
-			<newsslider:includeFile path="{settings.flexslider.cssFile}" />
-		</f:then>
-		<f:else>
-			<newsslider:includeFile path="EXT:newsslider/Resources/Public/Styles/Flexslider/flexslider.css" />
-		</f:else>
-	</f:if>
-	<newsslider:includeFile path="EXT:newsslider/Resources/Public/Scripts/jquery.flexslider-min.js" />
-	<newsslider:inlineJs contentObjectUid="{contentObjectData.uid}" action="flexslider" />
-	<div id="flexslider_{contentObjectData.uid}" class="tx_newsslider flexslider{f:if(condition:'{settings.flexslider.style}==4',then:' carousel')}{f:if(condition:'{settings.flexslider.style}==5',then:' carousel')}" style="max-width:{settings.flexslider.width}px;" >
-		<ul class="slides">
-			<f:render section="Flexslider" />
-		</ul>
-	</div>
-	<f:if condition="{settings.flexslider.style} == 3">
-		<div id="carousel_{contentObjectData.uid}" class="flexslider carousel thumbnailslider hidden-xs" style="max-width:{settings.flexslider.width}px;">
-			<ul class="slides">
-				<f:render section="ThumbnailSlider" />
-			</ul>
-		</div>
-	</f:if>
-</f:if>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:newsslider="http://typo3.org/ns/T3S/Newsslider/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{news}">
+	<f:if condition="{settings.flexslider.cssFile}">
+		<f:then>
+			<newsslider:includeFile path="{settings.flexslider.cssFile}" />
+		</f:then>
+		<f:else>
+			<newsslider:includeFile path="EXT:newsslider/Resources/Public/Styles/Flexslider/flexslider.css" />
+		</f:else>
+	</f:if>
+	<newsslider:includeFile path="EXT:newsslider/Resources/Public/Scripts/jquery.flexslider-min.js" />
+	<newsslider:inlineJs contentObjectUid="{contentObjectData.uid}" action="flexslider" />
+	<div id="flexslider_{contentObjectData.uid}" class="tx_newsslider flexslider{f:if(condition:'{settings.flexslider.style}==4',then:' carousel')}{f:if(condition:'{settings.flexslider.style}==5',then:' carousel')}" style="max-width:{settings.flexslider.width}px;" >
+		<ul class="slides">
+			<f:render section="Flexslider" />
+		</ul>
+	</div>
+	<f:if condition="{settings.flexslider.style} == 3">
+		<div id="carousel_{contentObjectData.uid}" class="flexslider carousel thumbnailslider hidden-xs" style="max-width:{settings.flexslider.width}px;">
+			<ul class="slides">
+				<f:render section="ThumbnailSlider" />
+			</ul>
+		</div>
+	</f:if>
+</f:if>
 </html>

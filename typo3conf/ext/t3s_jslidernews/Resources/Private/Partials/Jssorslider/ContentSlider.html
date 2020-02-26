@@ -1,33 +1,33 @@
-<f:if condition="{settings.jssorslider.bgImage}">
-	<f:then>
-		<div id="slider{settings.contentUid}_container" style="position: relative; margin: 0 auto; top: 0; left: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px;
-			background: url({f:uri.image(src: '{settings.jssorslider.bgImage}' treatIdAsReference: 1 width: '{settings.jssorslider.width}c', height: '{settings.jssorslider.height}c')}) top center no-repeat;">
-	</f:then>
-	<f:else>
-		<div id="slider{settings.contentUid}_container" style="position: relative; margin: 0 auto; top: 0; left: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px;">
-	</f:else>
-</f:if>
-    <div u="loading" style="position: absolute; top: 0; left: 0;">
-        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;"></div>
-        <div style="position: absolute; display: block; background: url('typo3conf/ext/t3s_jslidernews/Resources/Public/Styles/Jssorslider/img/loading.gif') no-repeat center center; top: 0; left: 0; width: 100%; height: 100%;"></div>
-    </div>
-	<f:render partial="Jssorslider/Slides" arguments="{_all}" />
-    <span u="arrowleft" class="jssora07l" style="width: 50px; height: 50px; top: 123px; left: 8px;"></span>
-    <span u="arrowright" class="jssora07r" style="width: 50px; height: 50px; top: 123px; right: 8px"></span>
-    <div u="thumbnavigator" class="jssort04 content-thumbnavigator">
-        <div u="slides" class="content-thumbslides">
-            <div u="prototype" class="p">
-                <div class="w">
-                    <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
-                </div>
-                <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
-                </div>
-            </div>
-        </div>
-    </div>
-    <a style="display: none" href="http://www.jssor.com">javascript</a>
-</div>
-
-
-
-
+<f:if condition="{settings.jssorslider.bgImage}">
+	<f:then>
+		<div id="slider{settings.contentUid}_container" style="position: relative; margin: 0 auto; top: 0; left: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px;
+			background: url({f:uri.image(src: '{settings.jssorslider.bgImage}' treatIdAsReference: 1 width: '{settings.jssorslider.width}c', height: '{settings.jssorslider.height}c')}) top center no-repeat;">
+	</f:then>
+	<f:else>
+		<div id="slider{settings.contentUid}_container" style="position: relative; margin: 0 auto; top: 0; left: 0; width: {settings.jssorslider.width}px; height: {settings.jssorslider.height}px;">
+	</f:else>
+</f:if>
+    <div u="loading" style="position: absolute; top: 0; left: 0;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div style="position: absolute; display: block; background: url('typo3conf/ext/t3s_jslidernews/Resources/Public/Styles/Jssorslider/img/loading.gif') no-repeat center center; top: 0; left: 0; width: 100%; height: 100%;"></div>
+    </div>
+	<f:render partial="Jssorslider/Slides" arguments="{_all}" />
+    <span u="arrowleft" class="jssora07l" style="width: 50px; height: 50px; top: 123px; left: 8px;"></span>
+    <span u="arrowright" class="jssora07r" style="width: 50px; height: 50px; top: 123px; right: 8px"></span>
+    <div u="thumbnavigator" class="jssort04 content-thumbnavigator">
+        <div u="slides" class="content-thumbslides">
+            <div u="prototype" class="p">
+                <div class="w">
+                    <thumbnailtemplate style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;"></thumbnailtemplate>
+                </div>
+                <div class="c" style="position: absolute; background-color: #000; top: 0; left: 0">
+                </div>
+            </div>
+        </div>
+    </div>
+    <a style="display: none" href="http://www.jssor.com">javascript</a>
+</div>
+
+
+
+

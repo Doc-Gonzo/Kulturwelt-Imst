@@ -1,0 +1,28 @@
+{
+    "name": "ciresa/navidual",
+    "type": "typo3-cms-extension",
+    "description": "Individuelle Navigation, Orte- und Routenverwaltung.",
+    "authors": [
+        {
+            "name": "Fabio Ciresa",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ciresa\\Navidual\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ciresa\\Navidual\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "navidual": "self.version",
+        "typo3-ter/navidual": "self.version"
+    }
+}

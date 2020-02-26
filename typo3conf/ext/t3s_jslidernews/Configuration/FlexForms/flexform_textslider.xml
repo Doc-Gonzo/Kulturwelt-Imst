@@ -1,393 +1,393 @@
-<T3DataStructure>
-	<meta>
-		<langDisable>1</langDisable>
-	</meta>
-
-	<sheets>
-		<!--
-			################################
-			  SHEET Slider Settings
-			################################
-		-->
-		<sDEF>
-			<ROOT>
-				<TCEforms>
-					<sheetTitle>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.sheetTitle</sheetTitle>
-				</TCEforms>
-				<type>array</type>
-				<el>
-
-
-				<switchableControllerActions>
-					<TCEforms>
-					  <label>jQuery - Plugin:</label>
-					  <onChange>reload</onChange>
-					  <config>
-					    <type>select</type>
-					    <items>
-					       <numIndex index="0">
-					         <numIndex index="0">Flexslider (responsive)</numIndex>
-					         <numIndex index="1">flexslider</numIndex>
-					       </numIndex>
-					       <numIndex index="1">
-					         <numIndex index="0">Nivoslider (responsive)</numIndex>
-					         <numIndex index="1">nivoslider</numIndex>
-					       </numIndex>
-					       <numIndex index="2">
-					         <numIndex index="0">Jssor Slider (responsive)</numIndex>
-					         <numIndex index="1">jssorslider</numIndex>
-					       </numIndex>
-					     </items>
-					  </config>
-					</TCEforms>
-				</switchableControllerActions>
-
-
-<!--
-			  Flexslider
-		-->
-
-
-  		    <!-- Slider Width -->
-      		<settings.flexslider.width>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxWidth</label>
-      				<config>
-      					<type>input</type>
-      					<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>700</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-      				</config>
-      			</TCEforms>
-      		</settings.flexslider.width>
-
-  		    <!-- Slider Height -->
-      		<settings.flexslider.height>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxHeight</label>
-  					<config>
-  						<type>input</type>
-  						<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>300</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-  					</config>
-  				</TCEforms>
-      		</settings.flexslider.height>
-
-  		    <!-- Slider slideshowSpeed -->
-      		<settings.flexslider.slideshowSpeed>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.slideshowSpeed</label>
-  					<config>
-  						<type>input</type>
-  						<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>7000</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-  					</config>
-  				</TCEforms>
-      		</settings.flexslider.slideshowSpeed>
-
-
-  		    <!-- Slider animationSpeed -->
-      		<settings.flexslider.animationSpeed>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animationSpeed</label>
-  					<config>
-  						<type>input</type>
-  						<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>600</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-  					</config>
-  				</TCEforms>
-      		</settings.flexslider.animationSpeed>
-
-  		    <!-- Slider pauseOnHover -->
-  				<settings.flexslider.pauseOnHover>
-  					<TCEforms>
-  						<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.pauseOnHover</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.flexslider.pauseOnHover>
-
-
-  		    <!-- Slider Animation -->
-			<settings.flexslider.animation>
-				<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animationType</label>
-					<config>
-						<type>select</type>
-						<size>1</size>
-						<maxitems>1</maxitems>
-						<items type="array">
-							<numIndex index="0" type="array">
-								<numIndex index="0">Fade</numIndex>
-								<numIndex index="1">fade</numIndex>
-							</numIndex>
-							<numIndex index="1" type="array">
-								<numIndex index="0">Slide</numIndex>
-								<numIndex index="1">slide</numIndex>
-							</numIndex>
-						</items>
-					</config>
-				</TCEforms>
-			</settings.flexslider.animation>
-
-  		    <!-- Slider Auto -->
-  				<settings.flexslider.slideshow>
-  					<TCEforms>
-  						<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.auto</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.flexslider.slideshow>
-
-  		    <!-- Slider directionNav  -->
-  				<settings.flexslider.directionNav>
-  					<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.directionNav</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.flexslider.directionNav>
-
-  		    <!-- Slider Pagination -->
-  				<settings.flexslider.controlNav>
-  					<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.controlNav</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.flexslider.controlNav>
-
-
-<!--
-			  Nivoslider
-		-->
-
-  		    <!-- Nivoslider Theme -->
-  				<settings.nivoslider.theme>
-						<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-							<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.theme</label>
-							<config>
-								<type>select</type>
-								<size>1</size>
-								<maxitems>1</maxitems>
-								<items type="array">
-									<numIndex index="0" type="array">
-										<numIndex index="0">default</numIndex>
-										<numIndex index="1">default</numIndex>
-									</numIndex>
-									<numIndex index="1" type="array">
-										<numIndex index="0">light</numIndex>
-										<numIndex index="1">light</numIndex>
-									</numIndex>
-									<numIndex index="2" type="array">
-										<numIndex index="0">dark</numIndex>
-										<numIndex index="1">dark</numIndex>
-									</numIndex>
-									<numIndex index="3" type="array">
-										<numIndex index="0">bar</numIndex>
-										<numIndex index="1">bar</numIndex>
-									</numIndex>
- 								</items>
-							</config>
-						</TCEforms>
-  				</settings.nivoslider.theme>
-
-
-  		    <!-- Nivoslider Effect -->
-  				<settings.nivoslider.effect>
-						<TCEforms>
-							<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-							<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.effect</label>
-							<config>
-								<type>select</type>
-								<size>1</size>
-								<maxitems>1</maxitems>
-								<items type="array">
-									<numIndex index="0" type="array">
-										<numIndex index="0">random</numIndex>
-										<numIndex index="1">random</numIndex>
-									</numIndex>
-									<numIndex index="1" type="array">
-										<numIndex index="0">fold</numIndex>
-										<numIndex index="1">fold</numIndex>
-									</numIndex>
-									<numIndex index="2" type="array">
-										<numIndex index="0">fade</numIndex>
-										<numIndex index="1">fade</numIndex>
-									</numIndex>
-									<numIndex index="3" type="array">
-										<numIndex index="0">sliceDown</numIndex>
-										<numIndex index="1">sliceDown</numIndex>
-									</numIndex>
- 								</items>
-							</config>
-						</TCEforms>
-  				</settings.nivoslider.effect>
-
-  		    <!-- Nivoslider Width -->
-      		<settings.nivoslider.width>
-      				<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.maxWidth</label>
-      				<config>
-      					<type>input</type>
-      					<size>6</size>
-	  					<eval>int,nospace</eval>
-  						<placeholder>700</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-      				</config>
-      				</TCEforms>
-      		</settings.nivoslider.width>
-
-  		    <!-- Nivoslider Height -->
-      		<settings.nivoslider.height>
-      				<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.maxHeight</label>
-      				<config>
-      					<type>input</type>
-      					<size>6</size>
-	  					<eval>int,nospace</eval>
-  						<placeholder>300</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-      				</config>
-      				</TCEforms>
-      		</settings.nivoslider.height>
-
-  		    <!-- Slider animSpeed -->
-      		<settings.nivoslider.animSpeed>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animSpeed</label>
-  					<config>
-  						<type>input</type>
-  						<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>500</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-  					</config>
-  				</TCEforms>
-      		</settings.nivoslider.animSpeed>
-
-
-  		    <!-- Slider animationSpeed -->
-      		<settings.nivoslider.pauseTime>
-      			<TCEforms>
-  					<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.pauseTime</label>
-  					<config>
-  						<type>input</type>
-  						<size>6</size>
-  						<eval>int,nospace</eval>
-  						<placeholder>4000</placeholder>
-  						<mode>useOrOverridePlaceholder</mode>
-  					</config>
-  				</TCEforms>
-      		</settings.nivoslider.pauseTime>
-
-  		    <!-- Nivoslider manualAdvance -->
-  				<settings.nivoslider.manualAdvance>
-  					<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.auto</label>
-  						<config>
-  							<type>check</type>
-  							<default>0</default>
-  						</config>
-  					</TCEforms>
-  				</settings.nivoslider.manualAdvance>
-
-  		    <!-- Nivoslider directionNav  -->
-  				<settings.nivoslider.directionNav>
-  					<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.directionNav</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.nivoslider.directionNav>
-
-  		    <!-- Nivoslider controlNav -->
-  				<settings.nivoslider.controlNav>
-  					<TCEforms>
-  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
-  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.controlNav</label>
-  						<config>
-  							<type>check</type>
-  							<default>1</default>
-  						</config>
-  					</TCEforms>
-  				</settings.nivoslider.controlNav>
-
-
-
-<!--
-			  Jssor Slider
-		-->
-
-		  		    <!-- Slider Width -->
-		      		<settings.jssorslider.width>
-		      			<TCEforms>
-		  					<displayCond>FIELD:switchableControllerActions:=:jssorslider</displayCond>
-		      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxWidth</label>
-		      				<config>
-		      					<type>input</type>
-		      					<size>6</size>
-		  						<eval>int,nospace</eval>
-		  						<placeholder>600</placeholder>
-		  						<mode>useOrOverridePlaceholder</mode>
-		      				</config>
-		      			</TCEforms>
-		      		</settings.jssorslider.width>
-
-		  		    <!-- Slider Height -->
-		      		<settings.jssorslider.height>
-		      			<TCEforms>
-		  					<displayCond>FIELD:switchableControllerActions:=:jssorslider</displayCond>
-		  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxHeight</label>
-		  					<config>
-		  						<type>input</type>
-		  						<size>6</size>
-		  						<eval>int,nospace</eval>
-		  						<placeholder>300</placeholder>
-		  						<mode>useOrOverridePlaceholder</mode>
-		  					</config>
-		  				</TCEforms>
-		      		</settings.jssorslider.height>
-
-
-
-
-				</el>
-			</ROOT>
-		</sDEF>
-
-	</sheets>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+
+	<sheets>
+		<!--
+			################################
+			  SHEET Slider Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.sheetTitle</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+
+				<switchableControllerActions>
+					<TCEforms>
+					  <label>jQuery - Plugin:</label>
+					  <onChange>reload</onChange>
+					  <config>
+					    <type>select</type>
+					    <items>
+					       <numIndex index="0">
+					         <numIndex index="0">Flexslider (responsive)</numIndex>
+					         <numIndex index="1">flexslider</numIndex>
+					       </numIndex>
+					       <numIndex index="1">
+					         <numIndex index="0">Nivoslider (responsive)</numIndex>
+					         <numIndex index="1">nivoslider</numIndex>
+					       </numIndex>
+					       <numIndex index="2">
+					         <numIndex index="0">Jssor Slider (responsive)</numIndex>
+					         <numIndex index="1">jssorslider</numIndex>
+					       </numIndex>
+					     </items>
+					  </config>
+					</TCEforms>
+				</switchableControllerActions>
+
+
+<!--
+			  Flexslider
+		-->
+
+
+  		    <!-- Slider Width -->
+      		<settings.flexslider.width>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxWidth</label>
+      				<config>
+      					<type>input</type>
+      					<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>700</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+      				</config>
+      			</TCEforms>
+      		</settings.flexslider.width>
+
+  		    <!-- Slider Height -->
+      		<settings.flexslider.height>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxHeight</label>
+  					<config>
+  						<type>input</type>
+  						<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>300</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+  					</config>
+  				</TCEforms>
+      		</settings.flexslider.height>
+
+  		    <!-- Slider slideshowSpeed -->
+      		<settings.flexslider.slideshowSpeed>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.slideshowSpeed</label>
+  					<config>
+  						<type>input</type>
+  						<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>7000</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+  					</config>
+  				</TCEforms>
+      		</settings.flexslider.slideshowSpeed>
+
+
+  		    <!-- Slider animationSpeed -->
+      		<settings.flexslider.animationSpeed>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animationSpeed</label>
+  					<config>
+  						<type>input</type>
+  						<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>600</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+  					</config>
+  				</TCEforms>
+      		</settings.flexslider.animationSpeed>
+
+  		    <!-- Slider pauseOnHover -->
+  				<settings.flexslider.pauseOnHover>
+  					<TCEforms>
+  						<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.pauseOnHover</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.flexslider.pauseOnHover>
+
+
+  		    <!-- Slider Animation -->
+			<settings.flexslider.animation>
+				<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animationType</label>
+					<config>
+						<type>select</type>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">Fade</numIndex>
+								<numIndex index="1">fade</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">Slide</numIndex>
+								<numIndex index="1">slide</numIndex>
+							</numIndex>
+						</items>
+					</config>
+				</TCEforms>
+			</settings.flexslider.animation>
+
+  		    <!-- Slider Auto -->
+  				<settings.flexslider.slideshow>
+  					<TCEforms>
+  						<displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.auto</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.flexslider.slideshow>
+
+  		    <!-- Slider directionNav  -->
+  				<settings.flexslider.directionNav>
+  					<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.directionNav</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.flexslider.directionNav>
+
+  		    <!-- Slider Pagination -->
+  				<settings.flexslider.controlNav>
+  					<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:flexslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.controlNav</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.flexslider.controlNav>
+
+
+<!--
+			  Nivoslider
+		-->
+
+  		    <!-- Nivoslider Theme -->
+  				<settings.nivoslider.theme>
+						<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+							<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.theme</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">default</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">light</numIndex>
+										<numIndex index="1">light</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">dark</numIndex>
+										<numIndex index="1">dark</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">bar</numIndex>
+										<numIndex index="1">bar</numIndex>
+									</numIndex>
+ 								</items>
+							</config>
+						</TCEforms>
+  				</settings.nivoslider.theme>
+
+
+  		    <!-- Nivoslider Effect -->
+  				<settings.nivoslider.effect>
+						<TCEforms>
+							<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+							<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.effect</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">random</numIndex>
+										<numIndex index="1">random</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">fold</numIndex>
+										<numIndex index="1">fold</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">fade</numIndex>
+										<numIndex index="1">fade</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">sliceDown</numIndex>
+										<numIndex index="1">sliceDown</numIndex>
+									</numIndex>
+ 								</items>
+							</config>
+						</TCEforms>
+  				</settings.nivoslider.effect>
+
+  		    <!-- Nivoslider Width -->
+      		<settings.nivoslider.width>
+      				<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.maxWidth</label>
+      				<config>
+      					<type>input</type>
+      					<size>6</size>
+	  					<eval>int,nospace</eval>
+  						<placeholder>700</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+      				</config>
+      				</TCEforms>
+      		</settings.nivoslider.width>
+
+  		    <!-- Nivoslider Height -->
+      		<settings.nivoslider.height>
+      				<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.maxHeight</label>
+      				<config>
+      					<type>input</type>
+      					<size>6</size>
+	  					<eval>int,nospace</eval>
+  						<placeholder>300</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+      				</config>
+      				</TCEforms>
+      		</settings.nivoslider.height>
+
+  		    <!-- Slider animSpeed -->
+      		<settings.nivoslider.animSpeed>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.animSpeed</label>
+  					<config>
+  						<type>input</type>
+  						<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>500</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+  					</config>
+  				</TCEforms>
+      		</settings.nivoslider.animSpeed>
+
+
+  		    <!-- Slider animationSpeed -->
+      		<settings.nivoslider.pauseTime>
+      			<TCEforms>
+  					<displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.pauseTime</label>
+  					<config>
+  						<type>input</type>
+  						<size>6</size>
+  						<eval>int,nospace</eval>
+  						<placeholder>4000</placeholder>
+  						<mode>useOrOverridePlaceholder</mode>
+  					</config>
+  				</TCEforms>
+      		</settings.nivoslider.pauseTime>
+
+  		    <!-- Nivoslider manualAdvance -->
+  				<settings.nivoslider.manualAdvance>
+  					<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.auto</label>
+  						<config>
+  							<type>check</type>
+  							<default>0</default>
+  						</config>
+  					</TCEforms>
+  				</settings.nivoslider.manualAdvance>
+
+  		    <!-- Nivoslider directionNav  -->
+  				<settings.nivoslider.directionNav>
+  					<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.directionNav</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.nivoslider.directionNav>
+
+  		    <!-- Nivoslider controlNav -->
+  				<settings.nivoslider.controlNav>
+  					<TCEforms>
+  					  <displayCond>FIELD:switchableControllerActions:=:nivoslider</displayCond>
+  						<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xml:flexform.controlNav</label>
+  						<config>
+  							<type>check</type>
+  							<default>1</default>
+  						</config>
+  					</TCEforms>
+  				</settings.nivoslider.controlNav>
+
+
+
+<!--
+			  Jssor Slider
+		-->
+
+		  		    <!-- Slider Width -->
+		      		<settings.jssorslider.width>
+		      			<TCEforms>
+		  					<displayCond>FIELD:switchableControllerActions:=:jssorslider</displayCond>
+		      				<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxWidth</label>
+		      				<config>
+		      					<type>input</type>
+		      					<size>6</size>
+		  						<eval>int,nospace</eval>
+		  						<placeholder>600</placeholder>
+		  						<mode>useOrOverridePlaceholder</mode>
+		      				</config>
+		      			</TCEforms>
+		      		</settings.jssorslider.width>
+
+		  		    <!-- Slider Height -->
+		      		<settings.jssorslider.height>
+		      			<TCEforms>
+		  					<displayCond>FIELD:switchableControllerActions:=:jssorslider</displayCond>
+		  					<label>LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:flexform.maxHeight</label>
+		  					<config>
+		  						<type>input</type>
+		  						<size>6</size>
+		  						<eval>int,nospace</eval>
+		  						<placeholder>300</placeholder>
+		  						<mode>useOrOverridePlaceholder</mode>
+		  					</config>
+		  				</TCEforms>
+		      		</settings.jssorslider.height>
+
+
+
+
+				</el>
+			</ROOT>
+		</sDEF>
+
+	</sheets>
 </T3DataStructure>

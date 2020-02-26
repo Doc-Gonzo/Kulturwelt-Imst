@@ -1,239 +1,239 @@
-
-plugin.tx_t3sjslidernews {
-
-	view {
-		templateRootPaths {
-			100 = {$plugin.tx_t3sjslidernews.view.templateRootPath}
-		}
-		partialRootPaths {
-			100 = {$plugin.tx_t3sjslidernews.view.partialRootPath}
-		}
-		layoutRootPaths {
-			100 = {$plugin.tx_t3sjslidernews.view.layoutRootPath}
-		}
-	}
-
-	settings {
-	      # If using multiple JS-Libraries (int).
-	    jqueryNoConflict = 0
-	    compressJS = FALSE
-	    compressCSS = FALSE
-	      # Move JS to the Footer if set (int).
-	    moveJsFromHeaderToFooter = 1
-	      # Move the inlineJS to the Footer if set (int).
-	    moveInlineJsFromHeaderToFooter = 1
-	      # For bodytext/teaser cropping (int).
-		cropMaxChar = 150
-	      # For bodytext/teaser cropping in Navigation (int).
-		cropNavMaxChar = 50
-
-		  # slider plugin configuration
-	    jslidernews {
-	        # Easing method (string - default: easeInOutQuad / info: http://gsgd.co.uk/sandbox/jquery/easing/).
-	      easing = easeInOutQuad
-	        # Number of the displayed navigationitems (int+ - default: 3).
-	      maxItemDisplay = 3
-	        # Mouse-Event for navigation - (0=click, 1=mouseover).
-	      event = 0
-	        # Time in milliseconds the animation stopped (int+ - default: 4000).
-	      interval = 4000
-	        # Slide transition speed in milliseconds (int+ - default: 600).
-	      duration = 600
-	        # Fade the image and slide the text if set (boolean).
-	      direction = 0
-	        # Shows the category in description (boolean).
-	      showCatInDesc = 1
-	        # Shows the date in description (boolean).
-	      showDateInDesc = 1
-	        # Style 1&4 only - shows a vertical navigation if set (boolean).
-	      verticalNav = 0
-	        # Style 2&3 only - shows a thumbnail in the navigator if set (boolean).
-	      navThumb = 1
-	        # Style 2&3 only - shows news category in the navigator if set (boolean).
-	      showCatInNav = 0
-	        # Style 2&3 only - shows alt title in the navigator if set (boolean).
-	      showAltTileInNav = 0
-	        # Style 2&3 only - shows news author in the navigator if set (boolean).
-	      showAuthorInNav = 0
-	        # Style 2&3 only - shows news date in the navigator if set (boolean).
-	      showDateInNav = 0
-	    }
-
-	    flexslider {
-	    	// all missing options can be set by flexform
-		    # The slide that the slider should start on. Array notation (0 = first slide)
-		  startAt = 0
-	        # Slider will use CSS3 transitions if available
-	      useCSS = true
-	        # Allow touch swipe navigation of the slider on touch-enabled devices
-	      touch = true
-	        # String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported!
-	      easing = swing
-	        # String: Select the sliding direction, "horizontal" or "vertical"
-	      direction = horizontal
-	        # Boolean: Reverse the animation direction
-	      reverse = false
-	        # Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
-		  animationLoop = true
-	        # Boolean: Allow height of the slider to animate smoothly in horizontal mode
-	      smoothHeight = false
-	        # Integer: Set an initialization delay, in milliseconds
-	      initDelay = 0
-	        # Boolean: Randomize slide order
-	      randomize = false
-	        # Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
-	      video = false
-	        # String: Set the text for the "previous" directionNav item
-	      prevText = Previous
-	        # String: Set the text for the "next" directionNav item
-	      nextText = Next
-	        # Boolean: Allow slider navigating via keyboard left/right keys
-	      keyboard = true
-	        # Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slider present.
-	      multipleKeyboard = false
-	        # Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slider navigating via mousewheel
-	      mousewheel = false
-	        # Boolean: Create pause/play dynamic element
-	      pausePlay = false
-	        # String: Set the text for the "pause" pausePlay item
-	      pauseText = Pause
-	        # String: Set the text for the "play" pausePlay item
-	      playText = Play
-	        // Carousel Options
-	        # Integer: Carousel Options -> Margin between carousel items. If you change this, you have to edit the css-file (.carousel li {margin-right: 5px;})
-	      itemMargin = 5
-	        # Integer: Carousel Options -> Number of carousel items that should move on animation. If 0, slider will move all visible items.
-	      move = 0
-	    }
-
-	    nivoslider {
-	        # For slice animations
-	      slices = 15
-	        # For box animations
-	      boxCols = 8
-	        # For box animations
-	      boxRows = 4
-	        # Set starting Slide (0 index)
-	      startSlide = 0
-	        # Stop animation while hovering
-	      pauseOnHover = true
-	        # Start on a random slide
-	      randomStart = false
-	        # Prev directionNav text
-	      prevText = Prev
-	        # Next directionNav text
-	      nextText = Next
-	    }
-
-		jssorslider {
-			 # List Slider
-			list {
-				 # Width of navigation
-				thumbnavigator.width = 240
-				 # Number of navigation items
-				thumbnavigator.number = 4
-				 # Thumbnail width
-				thumbnavigator.thumbnail.width = 60
-				 # Thumbnail height
-				thumbnavigator.thumbnail.height = 30
-			}
-			 # Content Slider
-			content {
-				 # Top distance in px
-				image.top = 23
-				 # Thumbnail width in px
-				thumbnail.width = 60
-				 # Thumbnail height in px
-				thumbnail.height = 30
-
-			}
-		}
-
-		textslider {
-			headerOnTop = 0
-		}
-	}
-}
-
-
-config.tx_extbase {
-	persistence{
-		enableAutomaticCacheClearing = 1
-		updateReferenceIndex = 0
-		classes {
-			T3S\T3sJslidernews\Domain\Model\Content {
-				mapping {
-					tableName = tt_content
-					columns {
-						uid.mapOnProperty = uid
-						pid.mapOnProperty = pid
-						sorting.mapOnProperty = sorting
-						CType.mapOnProperty = contentType
-						header.mapOnProperty = title
-						subheader.mapOnProperty = subheader
-						header_link.mapOnProperty = headerLink
-						bodytext.mapOnProperty = bodytext
-						image.mapOnProperty = image
-						image_link.mapOnProperty = imageLink
-						colPos.mapOnProperty = colPos
-					}
-				}
-			}
-            T3S\T3sJslidernews\Domain\Model\Pages {
-                mapping {
-                    tableName = pages
-                    columns {
-                        uid.mapOnProperty = uid
-                        pid.mapOnProperty = pid
-                        sorting.mapOnProperty = sorting
-                        title.mapOnProperty = title
-                        subtitle.mapOnProperty = subtitle
-                        media.mapOnProperty = image
-                        description.mapOnProperty = bodytext
-                    }
-                }
-            }
-            T3S\T3sJslidernews\Domain\Model\PagesLanguageOverlay {
-                mapping {
-                    tableName = pages_language_overlay
-                    columns {
-                        uid.mapOnProperty = uid
-                        pid.mapOnProperty = pid
-                        sorting.mapOnProperty = sorting
-                        title.mapOnProperty = title
-                        subtitle.mapOnProperty = subtitle
-                        media.mapOnProperty = image
-                        description.mapOnProperty = bodytext
-                    }
-                }
-            }
-		}
-	}
-}
-
-tt_content.textslider = COA
-tt_content.textslider {
-#	10 = < lib.stdheader
-	20 = FLUIDTEMPLATE
-	20 {
-		file = {$plugin.tx_t3sjslidernews.view.templateRootPath}Contentslider/TextSlider.html
-		partialRootPath = {$plugin.tx_t3sjslidernews.view.partialRootPath}
-		settings < plugin.tx_t3sjslidernews.settings
-		variables {
-			stdheader = < lib.stdheader
-		}
-	}
-}
-
-[globalVar = LIT:1 = {$plugin.tx_t3sjslidernews.settings.includeJquery}]
-	page.includeJSFooterlibs {
-		jql = https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
-		jql {
-			type = text/javascript
-			external = 1
-			forceOnTop = 1
-			disableCompression = 1
-			excludeFromConcatenation = 1
-		}
-	}
+
+plugin.tx_t3sjslidernews {
+
+	view {
+		templateRootPaths {
+			100 = {$plugin.tx_t3sjslidernews.view.templateRootPath}
+		}
+		partialRootPaths {
+			100 = {$plugin.tx_t3sjslidernews.view.partialRootPath}
+		}
+		layoutRootPaths {
+			100 = {$plugin.tx_t3sjslidernews.view.layoutRootPath}
+		}
+	}
+
+	settings {
+	      # If using multiple JS-Libraries (int).
+	    jqueryNoConflict = 0
+	    compressJS = FALSE
+	    compressCSS = FALSE
+	      # Move JS to the Footer if set (int).
+	    moveJsFromHeaderToFooter = 1
+	      # Move the inlineJS to the Footer if set (int).
+	    moveInlineJsFromHeaderToFooter = 1
+	      # For bodytext/teaser cropping (int).
+		cropMaxChar = 150
+	      # For bodytext/teaser cropping in Navigation (int).
+		cropNavMaxChar = 50
+
+		  # slider plugin configuration
+	    jslidernews {
+	        # Easing method (string - default: easeInOutQuad / info: http://gsgd.co.uk/sandbox/jquery/easing/).
+	      easing = easeInOutQuad
+	        # Number of the displayed navigationitems (int+ - default: 3).
+	      maxItemDisplay = 3
+	        # Mouse-Event for navigation - (0=click, 1=mouseover).
+	      event = 0
+	        # Time in milliseconds the animation stopped (int+ - default: 4000).
+	      interval = 4000
+	        # Slide transition speed in milliseconds (int+ - default: 600).
+	      duration = 600
+	        # Fade the image and slide the text if set (boolean).
+	      direction = 0
+	        # Shows the category in description (boolean).
+	      showCatInDesc = 1
+	        # Shows the date in description (boolean).
+	      showDateInDesc = 1
+	        # Style 1&4 only - shows a vertical navigation if set (boolean).
+	      verticalNav = 0
+	        # Style 2&3 only - shows a thumbnail in the navigator if set (boolean).
+	      navThumb = 1
+	        # Style 2&3 only - shows news category in the navigator if set (boolean).
+	      showCatInNav = 0
+	        # Style 2&3 only - shows alt title in the navigator if set (boolean).
+	      showAltTileInNav = 0
+	        # Style 2&3 only - shows news author in the navigator if set (boolean).
+	      showAuthorInNav = 0
+	        # Style 2&3 only - shows news date in the navigator if set (boolean).
+	      showDateInNav = 0
+	    }
+
+	    flexslider {
+	    	// all missing options can be set by flexform
+		    # The slide that the slider should start on. Array notation (0 = first slide)
+		  startAt = 0
+	        # Slider will use CSS3 transitions if available
+	      useCSS = true
+	        # Allow touch swipe navigation of the slider on touch-enabled devices
+	      touch = true
+	        # String: Determines the easing method used in jQuery transitions. jQuery easing plugin is supported!
+	      easing = swing
+	        # String: Select the sliding direction, "horizontal" or "vertical"
+	      direction = horizontal
+	        # Boolean: Reverse the animation direction
+	      reverse = false
+	        # Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+		  animationLoop = true
+	        # Boolean: Allow height of the slider to animate smoothly in horizontal mode
+	      smoothHeight = false
+	        # Integer: Set an initialization delay, in milliseconds
+	      initDelay = 0
+	        # Boolean: Randomize slide order
+	      randomize = false
+	        # Boolean: If using video in the slider, will prevent CSS3 3D Transforms to avoid graphical glitches
+	      video = false
+	        # String: Set the text for the "previous" directionNav item
+	      prevText = Previous
+	        # String: Set the text for the "next" directionNav item
+	      nextText = Next
+	        # Boolean: Allow slider navigating via keyboard left/right keys
+	      keyboard = true
+	        # Boolean: Allow keyboard navigation to affect multiple sliders. Default behavior cuts out keyboard navigation with more than one slider present.
+	      multipleKeyboard = false
+	        # Boolean: Requires jquery.mousewheel.js (https://github.com/brandonaaron/jquery-mousewheel) - Allows slider navigating via mousewheel
+	      mousewheel = false
+	        # Boolean: Create pause/play dynamic element
+	      pausePlay = false
+	        # String: Set the text for the "pause" pausePlay item
+	      pauseText = Pause
+	        # String: Set the text for the "play" pausePlay item
+	      playText = Play
+	        // Carousel Options
+	        # Integer: Carousel Options -> Margin between carousel items. If you change this, you have to edit the css-file (.carousel li {margin-right: 5px;})
+	      itemMargin = 5
+	        # Integer: Carousel Options -> Number of carousel items that should move on animation. If 0, slider will move all visible items.
+	      move = 0
+	    }
+
+	    nivoslider {
+	        # For slice animations
+	      slices = 15
+	        # For box animations
+	      boxCols = 8
+	        # For box animations
+	      boxRows = 4
+	        # Set starting Slide (0 index)
+	      startSlide = 0
+	        # Stop animation while hovering
+	      pauseOnHover = true
+	        # Start on a random slide
+	      randomStart = false
+	        # Prev directionNav text
+	      prevText = Prev
+	        # Next directionNav text
+	      nextText = Next
+	    }
+
+		jssorslider {
+			 # List Slider
+			list {
+				 # Width of navigation
+				thumbnavigator.width = 240
+				 # Number of navigation items
+				thumbnavigator.number = 4
+				 # Thumbnail width
+				thumbnavigator.thumbnail.width = 60
+				 # Thumbnail height
+				thumbnavigator.thumbnail.height = 30
+			}
+			 # Content Slider
+			content {
+				 # Top distance in px
+				image.top = 23
+				 # Thumbnail width in px
+				thumbnail.width = 60
+				 # Thumbnail height in px
+				thumbnail.height = 30
+
+			}
+		}
+
+		textslider {
+			headerOnTop = 0
+		}
+	}
+}
+
+
+config.tx_extbase {
+	persistence{
+		enableAutomaticCacheClearing = 1
+		updateReferenceIndex = 0
+		classes {
+			T3S\T3sJslidernews\Domain\Model\Content {
+				mapping {
+					tableName = tt_content
+					columns {
+						uid.mapOnProperty = uid
+						pid.mapOnProperty = pid
+						sorting.mapOnProperty = sorting
+						CType.mapOnProperty = contentType
+						header.mapOnProperty = title
+						subheader.mapOnProperty = subheader
+						header_link.mapOnProperty = headerLink
+						bodytext.mapOnProperty = bodytext
+						image.mapOnProperty = image
+						image_link.mapOnProperty = imageLink
+						colPos.mapOnProperty = colPos
+					}
+				}
+			}
+            T3S\T3sJslidernews\Domain\Model\Pages {
+                mapping {
+                    tableName = pages
+                    columns {
+                        uid.mapOnProperty = uid
+                        pid.mapOnProperty = pid
+                        sorting.mapOnProperty = sorting
+                        title.mapOnProperty = title
+                        subtitle.mapOnProperty = subtitle
+                        media.mapOnProperty = image
+                        description.mapOnProperty = bodytext
+                    }
+                }
+            }
+            T3S\T3sJslidernews\Domain\Model\PagesLanguageOverlay {
+                mapping {
+                    tableName = pages_language_overlay
+                    columns {
+                        uid.mapOnProperty = uid
+                        pid.mapOnProperty = pid
+                        sorting.mapOnProperty = sorting
+                        title.mapOnProperty = title
+                        subtitle.mapOnProperty = subtitle
+                        media.mapOnProperty = image
+                        description.mapOnProperty = bodytext
+                    }
+                }
+            }
+		}
+	}
+}
+
+tt_content.textslider = COA
+tt_content.textslider {
+#	10 = < lib.stdheader
+	20 = FLUIDTEMPLATE
+	20 {
+		file = {$plugin.tx_t3sjslidernews.view.templateRootPath}Contentslider/TextSlider.html
+		partialRootPath = {$plugin.tx_t3sjslidernews.view.partialRootPath}
+		settings < plugin.tx_t3sjslidernews.settings
+		variables {
+			stdheader = < lib.stdheader
+		}
+	}
+}
+
+[globalVar = LIT:1 = {$plugin.tx_t3sjslidernews.settings.includeJquery}]
+	page.includeJSFooterlibs {
+		jql = https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
+		jql {
+			type = text/javascript
+			external = 1
+			forceOnTop = 1
+			disableCompression = 1
+			excludeFromConcatenation = 1
+		}
+	}
 [global]

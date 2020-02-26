@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<table border="1" cellspacing="1" cellpadding="5">
+    <tr>
+        <td>Bezeichnung</td>
+        <td>Beschreibung</td>
+        <td>Adresse</td>
+        <td>Gemeinde</td>
+        <td>PLZ</td>
+    </tr>
+    <f:for each="{orts}" as="ort">
+        <tr>
+            <td align="top">{ort.ortBezeichnung}</td>
+            <td align="top">
+                <f:format.crop maxCharacters="100">{ort.ortBeschreibung}</f:format.crop>
+            </td>
+            <td align="top">{ort.ortAdresse}</td>
+            <td align="top">{ort.ortGemeinde}</td>
+            <td align="top">{ort.ortPlz}</td>
+        </tr>
+    </f:for>
+</table>
+</html>

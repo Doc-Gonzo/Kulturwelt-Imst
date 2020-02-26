@@ -1,44 +1,44 @@
-{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
-
-<f:comment><!-- Include CSS-File --></f:comment>
-<f:if condition="{settings.jssorslider.cssFile}">
-	<f:then>
-		<t3s:includeFile path="{settings.jssorslider.cssFile}" />
-	</f:then>
-	<f:else>
-		<f:if condition="{settings.jssorslider.style} == 1">
-			<f:comment><!-- banner-rotator --></f:comment>
-			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/BannerRotator.css" />
-		</f:if>
-		<f:if condition="{settings.jssorslider.style} == 2">
-			<f:comment><!-- banner-slider --></f:comment>
-			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/BannerSlider.css" />
-		</f:if>
-		<f:if condition="{settings.jssorslider.style} == 3">
-			<f:comment><!-- content-slider --></f:comment>
-			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/ContentSlider.css" />
-		</f:if>
-		<f:if condition="{settings.jssorslider.style} == 4">
-			<f:comment><!-- full-width-slider --></f:comment>
-			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/FullWidthSlider.css" />
-		</f:if>
-		<f:if condition="{settings.jssorslider.style} == 5">
-			<f:comment><!-- list-slider --></f:comment>
-			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/ListSlider.css" />
-		</f:if>
-	</f:else>
-</f:if>
-<f:comment><!-- Include JavaScript --></f:comment>
-<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jssor.slider.mini.js" />
-<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
-<f:comment><!-- Slider --></f:comment>
-<f:if condition="{slides}">
-	<f:then>
-		<div class="t3s-jslidernews">
-			<f:render section="Jssorslider" />
-		</div>
-	</f:then>
-	<f:else>
-		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
-	</f:else>
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Include CSS-File --></f:comment>
+<f:if condition="{settings.jssorslider.cssFile}">
+	<f:then>
+		<t3s:includeFile path="{settings.jssorslider.cssFile}" />
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.jssorslider.style} == 1">
+			<f:comment><!-- banner-rotator --></f:comment>
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/BannerRotator.css" />
+		</f:if>
+		<f:if condition="{settings.jssorslider.style} == 2">
+			<f:comment><!-- banner-slider --></f:comment>
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/BannerSlider.css" />
+		</f:if>
+		<f:if condition="{settings.jssorslider.style} == 3">
+			<f:comment><!-- content-slider --></f:comment>
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/ContentSlider.css" />
+		</f:if>
+		<f:if condition="{settings.jssorslider.style} == 4">
+			<f:comment><!-- full-width-slider --></f:comment>
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/FullWidthSlider.css" />
+		</f:if>
+		<f:if condition="{settings.jssorslider.style} == 5">
+			<f:comment><!-- list-slider --></f:comment>
+			<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jssorslider/ListSlider.css" />
+		</f:if>
+	</f:else>
+</f:if>
+<f:comment><!-- Include JavaScript --></f:comment>
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jssor.slider.mini.js" />
+<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
+<f:comment><!-- Slider --></f:comment>
+<f:if condition="{slides}">
+	<f:then>
+		<div class="t3s-jslidernews">
+			<f:render section="Jssorslider" />
+		</div>
+	</f:then>
+	<f:else>
+		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
+	</f:else>
 </f:if>

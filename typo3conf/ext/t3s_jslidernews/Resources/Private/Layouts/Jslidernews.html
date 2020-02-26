@@ -1,46 +1,46 @@
-{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
-
-<f:comment><!-- Include CSS-File --></f:comment>
-<f:if condition="{settings.jslidernews.cssFile}">
-	<f:then>
-		<t3s:includeFile path="{settings.jslidernews.cssFile}" />
-	</f:then>
-	<f:else>
-		<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jslidernews/style{settings.jslidernews.style}.css" />
-	</f:else>
-</f:if>
-
-<f:comment><!-- Include JavaScript --></f:comment>
-<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.easing.js" />
-<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jslidernews.js" />
-<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
-
-<f:comment><!-- Slider --></f:comment>
-<f:if condition="{slides}">
-	<f:then>
-		<div id="lofslidecontent{settings.contentUid}" class="newsslider lof-slider lof-slider_{settings.jslidernews.style}" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
-			<div class="lof-wrapper" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
-				<div class="preload" ><div style="width:{settings.jslidernews.imgWidth}px; height:{settings.jslidernews.imgHeight}px;">&nbsp;</div></div>
-				<f:render section="Jslidernews" />
-				<f:if condition="{settings.jslidernews.auto}">
-					<f:if condition="{settings.jslidernews.progressbar}">
-						<div class="progressbar progressbar{settings.contentUid}" style="overflow: hidden;">&nbsp;</div>
-					</f:if>
-					<f:if condition="{settings.jslidernews.pause} == 2">
-						<div class="button-control button-control{settings.contentUid} action-stop"><span>&nbsp;</span></div>
-					</f:if>
-				</f:if>
-				<f:if condition="{settings.jslidernews.pagination}">
-					<ul class="navigationControl" style="width:{settings.jslidernews.width}px; overflow:hidden;">
-						<f:for each="{slides}" as="sliderItem" iteration="nr">
-							<li class="pagSelector">{nr.cycle}</li>
-						</f:for>
-					</ul>
-				</f:if>
-			</div>
-		</div>
-	</f:then>
-	<f:else>
-		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
-	</f:else>
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Include CSS-File --></f:comment>
+<f:if condition="{settings.jslidernews.cssFile}">
+	<f:then>
+		<t3s:includeFile path="{settings.jslidernews.cssFile}" />
+	</f:then>
+	<f:else>
+		<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Styles/Jslidernews/style{settings.jslidernews.style}.css" />
+	</f:else>
+</f:if>
+
+<f:comment><!-- Include JavaScript --></f:comment>
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jquery.easing.js" />
+<t3s:includeFile path="EXT:t3s_jslidernews/Resources/Public/Scripts/jslidernews.js" />
+<t3s:inlineJs contentObjectUid="{settings.contentUid}" />
+
+<f:comment><!-- Slider --></f:comment>
+<f:if condition="{slides}">
+	<f:then>
+		<div id="lofslidecontent{settings.contentUid}" class="newsslider lof-slider lof-slider_{settings.jslidernews.style}" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
+			<div class="lof-wrapper" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
+				<div class="preload" ><div style="width:{settings.jslidernews.imgWidth}px; height:{settings.jslidernews.imgHeight}px;">&nbsp;</div></div>
+				<f:render section="Jslidernews" />
+				<f:if condition="{settings.jslidernews.auto}">
+					<f:if condition="{settings.jslidernews.progressbar}">
+						<div class="progressbar progressbar{settings.contentUid}" style="overflow: hidden;">&nbsp;</div>
+					</f:if>
+					<f:if condition="{settings.jslidernews.pause} == 2">
+						<div class="button-control button-control{settings.contentUid} action-stop"><span>&nbsp;</span></div>
+					</f:if>
+				</f:if>
+				<f:if condition="{settings.jslidernews.pagination}">
+					<ul class="navigationControl" style="width:{settings.jslidernews.width}px; overflow:hidden;">
+						<f:for each="{slides}" as="sliderItem" iteration="nr">
+							<li class="pagSelector">{nr.cycle}</li>
+						</f:for>
+					</ul>
+				</f:if>
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<h4 style="color:red;"><f:translate key="LLL:EXT:t3s_jslidernews/Resources/Private/Language/locallang.xlf:error" /></h4>
+	</f:else>
 </f:if>

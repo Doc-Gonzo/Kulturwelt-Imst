@@ -1,38 +1,38 @@
-<f:if condition="{image.title}">
-	<f:then>
-	    <div u="caption" t="CLIP|L" class="rs-caption-1">{image.title}</div>
-		<f:if condition="{image.alternative}">
-			<f:then>
-	            <div u="caption" t="CLIP|L" class="rs-caption-2">{image.alternative}</div>
-				<f:if condition="{image.description}">
-					<f:then>
-			            <div u="caption" t="CLIP|L" class="rs-caption-3">{image.description}</div>
-					</f:then>
-					<f:else>
-
-					</f:else>
-				</f:if>
-			</f:then>
-			<f:else>
-				<f:if condition="{image.description}">
-					<div u="caption" t="CLIP|L" class="rs-caption-2">{image.description}</div>
-				</f:if>
-			</f:else>
-		</f:if>
-	</f:then>
-	<f:else>
-		<f:if condition="{image.alternative}">
-			<f:then>
-	            <div u="caption" t="CLIP|L" class="rs-caption-1">{image.alternative}</div>
-				<f:if condition="{image.description}">
-					<div u="caption" t="CLIP|L" class="rs-caption-2">{image.description}</div>
-				</f:if>
-			</f:then>
-			<f:else>
-				<f:if condition="{image.description}">
-					<div u="caption" t="CLIP|L" class="rs-caption-3">{image.description}</div>
-				</f:if>
-			</f:else>
-		</f:if>
-	</f:else>
-</f:if>
+<f:if condition="{image.title}">
+	<f:then>
+	    <div u="caption" t="CLIP|L" class="rs-caption-1">{image.title}</div>
+		<f:if condition="{image.alternative}">
+			<f:then>
+	            <div u="caption" t="CLIP|L" class="rs-caption-2">{image.alternative}</div>
+				<f:if condition="{image.description}">
+					<f:then>
+			            <div u="caption" t="CLIP|L" class="rs-caption-3">{image.description}</div>
+					</f:then>
+					<f:else>
+
+					</f:else>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{image.description}">
+					<div u="caption" t="CLIP|L" class="rs-caption-2">{image.description}</div>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{image.alternative}">
+			<f:then>
+	            <div u="caption" t="CLIP|L" class="rs-caption-1">{image.alternative}</div>
+				<f:if condition="{image.description}">
+					<div u="caption" t="CLIP|L" class="rs-caption-2">{image.description}</div>
+				</f:if>
+			</f:then>
+			<f:else>
+				<f:if condition="{image.description}">
+					<div u="caption" t="CLIP|L" class="rs-caption-3">{image.description}</div>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

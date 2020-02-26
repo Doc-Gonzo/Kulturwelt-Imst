@@ -1,22 +1,22 @@
-<f:if condition="{settings.jslidernews.style} == 5">
-	<f:then>
-		<div class="lof-main-outer" style="width:{settings.jslidernews.imgWidth}px; height:{settings.jslidernews.imgHeight}px;">
-			<div class="lof-previous" onclick="return false">Previous</div>
-			<div class="lof-main-wapper">
-				<f:for each="{slides}" as="sliderItem">
-					<f:render partial="Jslidernews/Slider/Item" arguments="{_all}"/>
-				</f:for>
-			</div>
-			<div class="lof-next" onclick="return false">Next</div>
-		</div>
-	</f:then>
-	<f:else>
-		<div class="lof-main-outer" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
-			<div class="lof-main-wapper">
-				<f:for each="{slides}" as="sliderItem">
-					<f:render partial="Jslidernews/Slider/Item" arguments="{_all}"/>
-				</f:for>
-			</div>
-		</div>
-	</f:else>
+<f:if condition="{settings.jslidernews.style} == 5">
+	<f:then>
+		<div class="lof-main-outer" style="width:{settings.jslidernews.imgWidth}px; height:{settings.jslidernews.imgHeight}px;">
+			<div class="lof-previous" onclick="return false">Previous</div>
+			<div class="lof-main-wapper">
+				<f:for each="{slides}" as="sliderItem">
+					<f:render partial="Jslidernews/Slider/Item" arguments="{_all}"/>
+				</f:for>
+			</div>
+			<div class="lof-next" onclick="return false">Next</div>
+		</div>
+	</f:then>
+	<f:else>
+		<div class="lof-main-outer" style="width:{settings.jslidernews.width}px; height:{settings.jslidernews.height}px;">
+			<div class="lof-main-wapper">
+				<f:for each="{slides}" as="sliderItem">
+					<f:render partial="Jslidernews/Slider/Item" arguments="{_all}"/>
+				</f:for>
+			</div>
+		</div>
+	</f:else>
 </f:if>

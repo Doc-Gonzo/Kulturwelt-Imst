@@ -1,57 +1,57 @@
-<f:for each="{slides}" as="sliderItem">
-	<f:if condition="{settings.flexslider.style} == 2">
-		<f:then>
-			<f:comment><!-- Style 2 --></f:comment>
-			<f:if condition="{settings.controller} == 'Newsslider'">
-				<f:then>
-					<f:comment><!-- Newsslider --></f:comment>
-					<f:if condition="{sliderItem.falMediaPreviews}">
-						<f:then>
-							<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
-								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<li data-thumb="{f:uri.image(src: '{mediaElement.uid}' treatIdAsReference: '1' width: '{settings.flexslider.thumbWidth}c',
-									 height: '{settings.flexslider.thumbHeight}c')}">
-								</f:if>
-							</f:alias>
-						</f:then>
-						<f:else>
-							<li data-thumb="{f:uri.image(src: '{settings.dummyImage}' width: '{settings.flexslider.thumbWidth}c',
-							 height: '{settings.flexslider.thumbHeight}c')}">
-						</f:else>
-					</f:if>
-				</f:then>
-				<f:else>
-					<f:comment><!-- Content- and Pageslider --></f:comment>
-					<li data-thumb="{f:uri.image(src: '{sliderItem.image.uid}' treatIdAsReference: '1' width: '{settings.flexslider.thumbWidth}c',
-					 height: '{settings.flexslider.thumbHeight}c')}">
-				</f:else>
-			</f:if>
-		</f:then>
-		<f:else>
-			<li>
-		</f:else>
-	</f:if>
-	<f:render partial="Flexslider/Image" arguments="{_all}" />
-	<f:if condition="{settings.flexslider.captions}">
-		<f:if condition="{settings.flexslider.style} < 4">
-			<div class="flex-caption">
-				<f:if condition="{settings.flexslider.captions} == 1">
-					<f:then>
-						<f:render partial="Caption" arguments="{_all}"/>
-					</f:then>
-					<f:else>
-						<f:if condition="{settings.flexslider.captions} == 2">
-							<f:then>
-								<f:render partial="CaptionFromImg" arguments="{_all}"/>
-							</f:then>
-							<f:else>
-								<f:render partial="CaptionAll" arguments="{_all}"/>
-							</f:else>
-						</f:if>
-					</f:else>
-				</f:if>
-			</div>
-		</f:if>
-	</f:if>
-	</li>
+<f:for each="{slides}" as="sliderItem">
+	<f:if condition="{settings.flexslider.style} == 2">
+		<f:then>
+			<f:comment><!-- Style 2 --></f:comment>
+			<f:if condition="{settings.controller} == 'Newsslider'">
+				<f:then>
+					<f:comment><!-- Newsslider --></f:comment>
+					<f:if condition="{sliderItem.falMediaPreviews}">
+						<f:then>
+							<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+								<f:if condition="{mediaElement.originalResource.type} == 2">
+									<li data-thumb="{f:uri.image(src: '{mediaElement.uid}' treatIdAsReference: '1' width: '{settings.flexslider.thumbWidth}c',
+									 height: '{settings.flexslider.thumbHeight}c')}">
+								</f:if>
+							</f:alias>
+						</f:then>
+						<f:else>
+							<li data-thumb="{f:uri.image(src: '{settings.dummyImage}' width: '{settings.flexslider.thumbWidth}c',
+							 height: '{settings.flexslider.thumbHeight}c')}">
+						</f:else>
+					</f:if>
+				</f:then>
+				<f:else>
+					<f:comment><!-- Content- and Pageslider --></f:comment>
+					<li data-thumb="{f:uri.image(src: '{sliderItem.image.uid}' treatIdAsReference: '1' width: '{settings.flexslider.thumbWidth}c',
+					 height: '{settings.flexslider.thumbHeight}c')}">
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<li>
+		</f:else>
+	</f:if>
+	<f:render partial="Flexslider/Image" arguments="{_all}" />
+	<f:if condition="{settings.flexslider.captions}">
+		<f:if condition="{settings.flexslider.style} < 4">
+			<div class="flex-caption">
+				<f:if condition="{settings.flexslider.captions} == 1">
+					<f:then>
+						<f:render partial="Caption" arguments="{_all}"/>
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.flexslider.captions} == 2">
+							<f:then>
+								<f:render partial="CaptionFromImg" arguments="{_all}"/>
+							</f:then>
+							<f:else>
+								<f:render partial="CaptionAll" arguments="{_all}"/>
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</div>
+		</f:if>
+	</f:if>
+	</li>
 </f:for>

@@ -1,47 +1,47 @@
-{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
-
-<f:comment><!-- Contentslider --></f:comment>
-<f:if condition="{settings.controller} == 'Contentslider'">
-	<f:if condition="{sliderItem.bodytext}">
-		<f:then>
-			<f:format.crop append="&nbsp;... <span class='readmore'><f:link.page pageUid='{sliderItem.pid}' section='{sliderItem.uid}'>
-			{f:translate(key: 'readmore')}</f:link.page></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
-			<f:format.html>{sliderItem.bodytext}</f:format.html>
-			</f:format.crop>
-		</f:then>
-		<f:else>
-			<f:if condition="{sliderItem.image.description}">
-				<f:format.html>{sliderItem.image.description}</f:format.html>
-			</f:if>
-		</f:else>
-	</f:if>
-</f:if>
-
-<f:comment><!-- Newsslider --></f:comment>
-<f:if condition="{settings.controller} == 'Newsslider'">
-	<f:if condition="{sliderItem.teaser}">
-		<f:then>
-			<f:format.crop append="&nbsp;... <span class='readmore'><t3s:link newsItem='{sliderItem}' settings='{settings}'>
-			{f:translate(key: 'readmore')}</t3s:link></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
-			<f:format.html>{sliderItem.teaser}</f:format.html>
-			</f:format.crop>
-		</f:then>
-		<f:else>
-			<f:if condition="{sliderItem.bodytext}">
-				<f:then>
-					<f:format.crop append="&nbsp;... <span class='readmore'><t3s:link newsItem='{sliderItem}' settings='{settings}'>
-					{f:translate(key: 'readmore')}</t3s:link></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
-					<f:format.html>{sliderItem.bodytext}</f:format.html>
-					</f:format.crop>
-				</f:then>
-				<f:else>
-					<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
-						<f:if condition="{mediaElement.originalResource.description}">
-							<f:format.html>{mediaElement.originalResource.description}</f:format.html>
-						</f:if>
-					</f:alias>
-				</f:else>
-			</f:if>
-		</f:else>
-	</f:if>
-</f:if>
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<f:if condition="{sliderItem.bodytext}">
+		<f:then>
+			<f:format.crop append="&nbsp;... <span class='readmore'><f:link.page pageUid='{sliderItem.pid}' section='{sliderItem.uid}'>
+			{f:translate(key: 'readmore')}</f:link.page></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
+			<f:format.html>{sliderItem.bodytext}</f:format.html>
+			</f:format.crop>
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.image.description}">
+				<f:format.html>{sliderItem.image.description}</f:format.html>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:if condition="{sliderItem.teaser}">
+		<f:then>
+			<f:format.crop append="&nbsp;... <span class='readmore'><t3s:link newsItem='{sliderItem}' settings='{settings}'>
+			{f:translate(key: 'readmore')}</t3s:link></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
+			<f:format.html>{sliderItem.teaser}</f:format.html>
+			</f:format.crop>
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.bodytext}">
+				<f:then>
+					<f:format.crop append="&nbsp;... <span class='readmore'><t3s:link newsItem='{sliderItem}' settings='{settings}'>
+					{f:translate(key: 'readmore')}</t3s:link></span>" maxCharacters="{settings.cropMaxChar}" respectHtml="FALSE">
+					<f:format.html>{sliderItem.bodytext}</f:format.html>
+					</f:format.crop>
+				</f:then>
+				<f:else>
+					<f:alias map="{mediaElement: sliderItem.falMediaPreviews.0}">
+						<f:if condition="{mediaElement.originalResource.description}">
+							<f:format.html>{mediaElement.originalResource.description}</f:format.html>
+						</f:if>
+					</f:alias>
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:if>

@@ -1,41 +1,41 @@
-<f:if condition="{settings.controller} == 'Newsslider'">
-	<f:then>
-		<f:comment><!-- Newsslider --></f:comment>
-		<f:if condition="{sliderItem.teaser}">
-			<f:then>
-				<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
-				<f:format.html>{sliderItem.teaser}</f:format.html>
-				</f:format.crop>
-			</f:then>
-			<f:else>
-				<f:if condition="{sliderItem.bodytext}">
-					<f:then>
-						<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
-						<f:format.html>{sliderItem.bodytext}</f:format.html>
-						</f:format.crop>
-					</f:then>
-					<f:else>
-						<f:if condition="{settings.jslidernews.captions} == 3">
-							<f:render partial="ImgDescription" arguments="{_all}" />
-						</f:if>
-					</f:else>
-				</f:if>
-			</f:else>
-		</f:if>
-	</f:then>
-	<f:else>
-		<f:comment><!-- Content- and Pageslider --></f:comment>
-		<f:if condition="{sliderItem.bodytext}">
-			<f:then>
-				<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
-				<f:format.html>{sliderItem.bodytext}</f:format.html>
-				</f:format.crop>
-			</f:then>
-			<f:else>
-				<f:if condition="{settings.jslidernews.captions} == 3">
-					<f:render partial="ImgDescription" arguments="{_all}" />
-				</f:if>
-			</f:else>
-		</f:if>	
-	</f:else>
-</f:if>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:then>
+		<f:comment><!-- Newsslider --></f:comment>
+		<f:if condition="{sliderItem.teaser}">
+			<f:then>
+				<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
+				<f:format.html>{sliderItem.teaser}</f:format.html>
+				</f:format.crop>
+			</f:then>
+			<f:else>
+				<f:if condition="{sliderItem.bodytext}">
+					<f:then>
+						<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
+						<f:format.html>{sliderItem.bodytext}</f:format.html>
+						</f:format.crop>
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.jslidernews.captions} == 3">
+							<f:render partial="ImgDescription" arguments="{_all}" />
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:comment><!-- Content- and Pageslider --></f:comment>
+		<f:if condition="{sliderItem.bodytext}">
+			<f:then>
+				<f:format.crop maxCharacters="{settings.cropNavMaxChar}" respectHtml="FALSE">
+				<f:format.html>{sliderItem.bodytext}</f:format.html>
+				</f:format.crop>
+			</f:then>
+			<f:else>
+				<f:if condition="{settings.jslidernews.captions} == 3">
+					<f:render partial="ImgDescription" arguments="{_all}" />
+				</f:if>
+			</f:else>
+		</f:if>	
+	</f:else>
+</f:if>

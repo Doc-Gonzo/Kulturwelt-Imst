@@ -1,21 +1,21 @@
-<f:comment><!-- Contentslider --></f:comment>
-<f:if condition="{settings.controller} == 'Contentslider'">
-	<f:if condition="{sliderItem.title}">
-		<f:then>
-			<f:render partial="HeaderLink" arguments="{_all}" />
-			<f:render partial="BodytextAll" arguments="{_all}" />
-		</f:then>
-		<f:else>
-			<f:if condition="{sliderItem.image.title}">
-				<f:render partial="ImgTitleLink" arguments="{_all}" />
-			</f:if>
-			<f:render partial="BodytextAll" arguments="{_all}" />
-		</f:else>
-	</f:if>
-</f:if>
-
-<f:comment><!-- Newsslider --></f:comment>
-<f:if condition="{settings.controller} == 'Newsslider'">
-	<f:render partial="HeaderLink" arguments="{_all}" />
-	<f:render partial="BodytextAll" arguments="{_all}" />
+<f:comment><!-- Contentslider --></f:comment>
+<f:if condition="{settings.controller} == 'Contentslider'">
+	<f:if condition="{sliderItem.title}">
+		<f:then>
+			<f:render partial="HeaderLink" arguments="{_all}" />
+			<f:render partial="BodytextAll" arguments="{_all}" />
+		</f:then>
+		<f:else>
+			<f:if condition="{sliderItem.image.title}">
+				<f:render partial="ImgTitleLink" arguments="{_all}" />
+			</f:if>
+			<f:render partial="BodytextAll" arguments="{_all}" />
+		</f:else>
+	</f:if>
+</f:if>
+
+<f:comment><!-- Newsslider --></f:comment>
+<f:if condition="{settings.controller} == 'Newsslider'">
+	<f:render partial="HeaderLink" arguments="{_all}" />
+	<f:render partial="BodytextAll" arguments="{_all}" />
 </f:if>

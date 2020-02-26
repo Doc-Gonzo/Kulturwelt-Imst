@@ -1,68 +1,68 @@
-        .captionOrange, .captionBlack
-        {
-            color: #fff;
-            font-size: 20px;
-            line-height: 30px;
-            text-align: center;
-            border-radius: 4px;
-        }
-        .captionOrange
-        {
-            background: #EB5100;
-            background-color: rgba(235, 81, 0, 0.6);
-        }
-        .captionBlack
-        {
-        	font-size:16px;
-            background: #000;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
-        {
-        	color: #ffffff;
-        	text-decoration: none;
-        }
-        a.captionOrange:hover
-        {
-            color: #eb5100;
-            text-decoration: underline;
-            background-color: #eeeeee;
-            background-color: rgba(238, 238, 238, 0.7);
-        }
-        .bricon
-        {
-            background: url(../img/browser-icons.png);
-        }
-
-.rs-caption-1 {
-	position:absolute;
-	left:100px;
-	top:80px;
-	font-size:32px;
-	color:#fff;
-	line-height:40px;
-}
-.rs-caption-2 {
-	position:absolute;
-	left:100px;
-	top:120px;
-	font-size:32px;
-	color:#fff;
-	line-height:40px;
-}
-.rs-caption-3 {
-	position:absolute;
-	left:100px;
-	top:160px;
-	font-size:32px;
-	color:#fff;
-	line-height:40px;
-}
-.responsive-slider {
-	position: relative;
-	margin: 0px 15px 10px 0px;
-	float: left;
-	top: 0;
-	left: 0;
-	overflow: hidden;
+        .captionOrange, .captionBlack
+        {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .captionOrange
+        {
+            background: #EB5100;
+            background-color: rgba(235, 81, 0, 0.6);
+        }
+        .captionBlack
+        {
+        	font-size:16px;
+            background: #000;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
+        {
+        	color: #ffffff;
+        	text-decoration: none;
+        }
+        a.captionOrange:hover
+        {
+            color: #eb5100;
+            text-decoration: underline;
+            background-color: #eeeeee;
+            background-color: rgba(238, 238, 238, 0.7);
+        }
+        .bricon
+        {
+            background: url(../img/browser-icons.png);
+        }
+
+.rs-caption-1 {
+	position:absolute;
+	left:100px;
+	top:80px;
+	font-size:32px;
+	color:#fff;
+	line-height:40px;
+}
+.rs-caption-2 {
+	position:absolute;
+	left:100px;
+	top:120px;
+	font-size:32px;
+	color:#fff;
+	line-height:40px;
+}
+.rs-caption-3 {
+	position:absolute;
+	left:100px;
+	top:160px;
+	font-size:32px;
+	color:#fff;
+	line-height:40px;
+}
+.responsive-slider {
+	position: relative;
+	margin: 0px 15px 10px 0px;
+	float: left;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }

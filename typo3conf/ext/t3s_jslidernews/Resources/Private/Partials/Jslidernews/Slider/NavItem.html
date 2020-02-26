@@ -1,46 +1,46 @@
-<li class="navSelector">
-	<f:comment><!-- Style 1 --></f:comment>
-	<f:if condition="{settings.jslidernews.style} == 1">
-		<f:if condition="{settings.jslidernews.navThumb} == 1">
-			<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
-		</f:if>
-	</f:if>
-	<f:comment><!-- Style 2 --></f:comment>
-	<f:if condition="{settings.jslidernews.style} == 2">
-		<div class="alpha" style="float:left; height:{settings.jslidernews.alphaHeight}px; width:{settings.jslidernews.navWidth}px; margin:1px 0;"> </div>
-		<div class="innerNavSelector" style="height:{settings.jslidernews.innerNavSelectorHeight}px; width:95%; padding:15px; margin:1px 0;">
-			<f:if condition="{settings.jslidernews.navThumb} == 1">
-				<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
-			</f:if>
-			<div class="navText" style="height:{settings.jslidernews.innerNavSelectorHeight}px;">
-				<f:if condition="{settings.jslidernews.captions} == 2">
-					<f:then>
-						<f:render partial="Jslidernews/NavCaptionFromImg" arguments="{_all}" />
-					</f:then>
-					<f:else>
-						<f:render partial="Jslidernews/NavCaption" arguments="{_all}" />
-					</f:else>
-				</f:if>
-			</div>
-		</div>
-	</f:if>
-	<f:comment><!-- Style 3 --></f:comment>
-	<f:if condition="{settings.jslidernews.style} == 3">
-		<div class="alpha" style="float:right; height:{settings.jslidernews.alphaHeight}px; width:{settings.jslidernews.navWidth}px; margin:1px 0;"> </div>
-		<div class="innerNavSelector" style="height:{settings.jslidernews.innerNavSelectorHeight}px; width:95%; padding:15px; margin:1px 0;">
-			<f:if condition="{settings.jslidernews.navThumb} == 1">
-				<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
-			</f:if>
-			<div class="navText" style="height:{settings.jslidernews.innerNavSelectorHeight}px;">
-				<f:if condition="{settings.jslidernews.captions} == 2">
-					<f:then>
-						<f:render partial="Jslidernews/NavCaptionFromImg" arguments="{_all}" />
-					</f:then>
-					<f:else>
-						<f:render partial="Jslidernews/NavCaption" arguments="{_all}" />
-					</f:else>
-				</f:if>
-			</div>
-		</div>
-	</f:if>
-</li>
+<li class="navSelector">
+	<f:comment><!-- Style 1 --></f:comment>
+	<f:if condition="{settings.jslidernews.style} == 1">
+		<f:if condition="{settings.jslidernews.navThumb} == 1">
+			<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
+		</f:if>
+	</f:if>
+	<f:comment><!-- Style 2 --></f:comment>
+	<f:if condition="{settings.jslidernews.style} == 2">
+		<div class="alpha" style="float:left; height:{settings.jslidernews.alphaHeight}px; width:{settings.jslidernews.navWidth}px; margin:1px 0;"> </div>
+		<div class="innerNavSelector" style="height:{settings.jslidernews.innerNavSelectorHeight}px; width:95%; padding:15px; margin:1px 0;">
+			<f:if condition="{settings.jslidernews.navThumb} == 1">
+				<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
+			</f:if>
+			<div class="navText" style="height:{settings.jslidernews.innerNavSelectorHeight}px;">
+				<f:if condition="{settings.jslidernews.captions} == 2">
+					<f:then>
+						<f:render partial="Jslidernews/NavCaptionFromImg" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:render partial="Jslidernews/NavCaption" arguments="{_all}" />
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</f:if>
+	<f:comment><!-- Style 3 --></f:comment>
+	<f:if condition="{settings.jslidernews.style} == 3">
+		<div class="alpha" style="float:right; height:{settings.jslidernews.alphaHeight}px; width:{settings.jslidernews.navWidth}px; margin:1px 0;"> </div>
+		<div class="innerNavSelector" style="height:{settings.jslidernews.innerNavSelectorHeight}px; width:95%; padding:15px; margin:1px 0;">
+			<f:if condition="{settings.jslidernews.navThumb} == 1">
+				<f:render partial="Jslidernews/Thumbnail/Thumb" arguments="{_all}"/>
+			</f:if>
+			<div class="navText" style="height:{settings.jslidernews.innerNavSelectorHeight}px;">
+				<f:if condition="{settings.jslidernews.captions} == 2">
+					<f:then>
+						<f:render partial="Jslidernews/NavCaptionFromImg" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<f:render partial="Jslidernews/NavCaption" arguments="{_all}" />
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</f:if>
+</li>

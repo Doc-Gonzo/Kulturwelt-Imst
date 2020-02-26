@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="90c13ad3-5540-48a5-aa39-9ccb83d5bbb4" name="Kulturwelt Imst" url="http://www.kama-design.at/kunststrasse">
+        <fileTransfer host="www56.world4you.com" port="21" rootFolder="/kunststrasse">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

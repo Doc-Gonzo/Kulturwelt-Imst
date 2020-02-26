@@ -1,27 +1,27 @@
-<div class="lof-item">
-	<f:render partial="Jslidernews/Image/Image" arguments="{_all}"/>
-	<f:if condition="{settings.jslidernews.captions}">
-		<div class="lof-description">
-	    	<div class="alpha2" style="float:left; height:100%; width:100%;">&nbsp;</div>
-		    <div style="position:relative; padding:10px;">
-
-				<f:if condition="{settings.jslidernews.captions} == 1">
-					<f:then>
-						<f:render partial="Caption" arguments="{_all}"/>
-					</f:then>
-					<f:else>
-						<f:if condition="{settings.jslidernews.captions} == 2">
-							<f:then>
-								<f:render partial="CaptionFromImg" arguments="{_all}"/>
-							</f:then>
-							<f:else>
-								<f:render partial="CaptionAll" arguments="{_all}"/>
-							</f:else>
-						</f:if>
-					</f:else>
-				</f:if>
-
-		    </div>
-		</div>
-	</f:if>
+<div class="lof-item">
+	<f:render partial="Jslidernews/Image/Image" arguments="{_all}"/>
+	<f:if condition="{settings.jslidernews.captions}">
+		<div class="lof-description">
+	    	<div class="alpha2" style="float:left; height:100%; width:100%;">&nbsp;</div>
+		    <div style="position:relative; padding:10px;">
+
+				<f:if condition="{settings.jslidernews.captions} == 1">
+					<f:then>
+						<f:render partial="Caption" arguments="{_all}"/>
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.jslidernews.captions} == 2">
+							<f:then>
+								<f:render partial="CaptionFromImg" arguments="{_all}"/>
+							</f:then>
+							<f:else>
+								<f:render partial="CaptionAll" arguments="{_all}"/>
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+
+		    </div>
+		</div>
+	</f:if>
 </div>

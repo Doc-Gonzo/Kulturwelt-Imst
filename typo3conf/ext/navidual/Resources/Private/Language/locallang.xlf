@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-02-21T18:59:50Z" product-name="navidual">
+		<header/>
+		<body>
+			<trans-unit id="tx_navidual_domain_model_ort">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_bezeichnung">
+				<source>Ort Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_beschreibung">
+				<source>Ort Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_adresse">
+				<source>Ort Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_gemeinde">
+				<source>Ort Gemeinde</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_plz">
+				<source>Ort Plz</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_latitude">
+				<source>Ort Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_ort.ort_longitude">
+				<source>Ort Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_route">
+				<source>Route</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_route.route_bezeichnung">
+				<source>Route Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_route.route_beschreibung">
+				<source>Route Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_navidual_domain_model_route.wegpunkte">
+				<source>Wegpunkte</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

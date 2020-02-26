@@ -1,38 +1,38 @@
-{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
-
-<f:layout name="Customslider" />
-<f:section name="Customslider">
-
-
-<f:debug title="Results of slides">{slides}</f:debug>
-
-
-<h3 style="color: red">You have to customize this template with the markup of your slider!</h3>
-
-<ul class="test-slider">
-	<f:if condition="{settings.customslider.imageLink}">
-		<f:then>
-			<f:for each="{slides}" as="sliderItem">
-				<li>
-					<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">
-						<f:render section="Test-Image" arguments="{_all}" />
-					</f:link.page>
-				</li>
-			</f:for>
-		</f:then>
-		<f:else>
-			<f:for each="{slides}" as="sliderItem">
-				<li>
-					<f:render section="Test-Image" arguments="{_all}" />
-				</li>
-			</f:for>
-		</f:else>
-	</f:if>
-</ul>
-
-</f:section>
-
-<f:section name="Test-Image">
-	<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1"
-	 width="{settings.customslider.width}c" height="{settings.customslider.height}c" />
+{namespace t3s=T3S\T3sJslidernews\ViewHelpers}
+
+<f:layout name="Customslider" />
+<f:section name="Customslider">
+
+
+<f:debug title="Results of slides">{slides}</f:debug>
+
+
+<h3 style="color: red">You have to customize this template with the markup of your slider!</h3>
+
+<ul class="test-slider">
+	<f:if condition="{settings.customslider.imageLink}">
+		<f:then>
+			<f:for each="{slides}" as="sliderItem">
+				<li>
+					<f:link.page pageUid="{sliderItem.pid}" section="{sliderItem.uid}">
+						<f:render section="Test-Image" arguments="{_all}" />
+					</f:link.page>
+				</li>
+			</f:for>
+		</f:then>
+		<f:else>
+			<f:for each="{slides}" as="sliderItem">
+				<li>
+					<f:render section="Test-Image" arguments="{_all}" />
+				</li>
+			</f:for>
+		</f:else>
+	</f:if>
+</ul>
+
+</f:section>
+
+<f:section name="Test-Image">
+	<t3s:image src="{sliderItem.image.uid}" treatIdAsReference="1"
+	 width="{settings.customslider.width}c" height="{settings.customslider.height}c" />
 </f:section>

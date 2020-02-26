@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2020-02-21T18:59:50Z" product-name="navidual">
+		<header/>
+		<body>
+			<trans-unit id="ort_bezeichnung.description">
+				<source>Bezeichnung des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_beschreibung.description">
+				<source>Beschreibung des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_adresse.description">
+				<source>Adresse des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_gemeinde.description">
+				<source>Gemeinde des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_plz.description">
+				<source>Postleitzahl des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_latitude.description">
+				<source>Latitude des Orts.</source>
+			</trans-unit>
+			<trans-unit id="ort_longitude.description">
+				<source>Longitude des Orts.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
