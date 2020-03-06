@@ -2421,7 +2421,8 @@ fieldset:disabled a.btn {
   background-color: #892934;
   border-color: #892934;
   font-family:"Open Sans", sans-serif !important;
-  font-size:16px !important;;
+  font-size:16px !important;
+  margin-top: 20px;
 }
 
 .btn-primary:hover {
@@ -4560,6 +4561,11 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+#map {
+  margin-left: 16px;
 }
 
 .card > hr {
