@@ -16,8 +16,18 @@
 }
 .menu-mobile {
     display: none;
-    padding: 20px;
+    padding: 30px;
 }
+.menu-mobile{
+    background-image: url(../img/menu_icon.png);
+    /* background-color: rgba(0,0,0,.4); */
+    background-position: center;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+/*
 .menu-mobile:after {
     content: "\f394";
     font-family: "Ionicons";
@@ -29,16 +39,24 @@
     -webkit-transform: translateY(-25%);
     transform: translateY(-25%);
 }
+*/
+
 .menu-dropdown-icon:before {
-    content: "\f489";
+    content: "";
     font-family: "Ionicons";
     display: none;
     cursor: pointer;
     float: right;
     padding: 1.5em 2em;
-    background: #fff;
     color: #333;
+    background-image: url(../img/menu_icon.png);
+    /* background-color: rgba(0,0,0,.4); */
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
 }
+
+
 .menu > ul {
     margin: 0 auto;
     width: 80%;
@@ -157,12 +175,15 @@
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
 Mobile style's
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1000px) {
     .menu > ul {
         width: 100%;
     }
+    .menu a:hover {
+        text-decoration: none !important;
+    }
 
-    @media only screen and (max-width: 959px) {
+    @media only screen and (max-width: 1000px) {
         .menu-container {
             width: 100%;
         }
@@ -174,7 +195,7 @@ Mobile style's
         .menu-mobile {
             display: block;
             float: right;
-            padding: 20px 20px 0;
+            padding: 10px 20px 0;
         }
 
         .menu-dropdown-icon:before {
@@ -190,8 +211,14 @@ Mobile style's
             width: 100%;
             float: none;
             display: block;
+            border-bottom: 1px solid grey;
         }
-
+        .menu_sub  a{
+            margin-left: 20px;
+            padding-bottom: 0 !important;
+            padding-top: 0 !important;
+            font-size: 16px !important;
+        }
         .menu > ul > li a {
             padding: 1.5em;
             width: 100%;
